@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+    
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+    <link rel='stylesheet' href='/stylesheets/adminProductos.css' />
+
+</head>
+<body>
+    
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Servicios</li>
+      </ol>
+    </nav>
+
+
+    <div class="external-container-section contenedortabla">
+
+      <div class="internal-container-section">
+
+        <button type="button" class="btn btn-primary"><a href="/admin/servicios/crear" class="linkEditar"> + Agregar Servicio</a></button>
+        <br>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col" class="thId">#</th>
+              <th scope="col" class="thImagen">Imagen</th>
+              <th scope="col" class="thNombre">Nombre</th>
+              <th scope="col" class="thPrecio">Precio</th>
+              <th scope="col" class="thPrecioDescuento">Precio con descuento</th>
+              <th scope="col" class="thEditar">Editar</th>
+              <th scope="col" class="thEliminar">Eliminar</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <% for(let i=0; i<servicios.length; i++) {%>
+            <tr>
+              <th scope="row"><%= servicios[i].id %></th>
+              <% if(servicios[i].imagenesServicios[0] == undefined){%>
+                <td><img src="" alt="" class="imagenProducto img-thumbnail"></td>
+              
+              <% }else{%>
+                <td><img src="/images/servicios/<%= servicios[i].imagenesServicios[0].imagen %>" alt="" class="imagenProducto img-thumbnail"></td>
+              
+              <% } %>
+              <td class="tdNombre"><%= servicios[i].nombre %></td>
+              <td class="tdPrecio"><%= servicios[i].precio %></td>
+              <td class="tdPrecioDescuento"><%= servicios[i].preciocondescuento %></td>
+              <td><button type="button" class="btn btn-primary"><a href="/admin/servicios/<%= servicios[i].id %>" class="linkEditar">Editar</a></button></td>
+              <td><button type="button" class="btn btn-danger"><a href="/admin/servicios/eliminar/<%= servicios[i].id %>" class="linkEditar">Eliminar</a></button></td>              
+            </tr>
+
+          <% } %>
+
+          </tbody>
+        </table>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+  <div class="external-container-section contenedormobile">
+
+    <div class="internal-container-section">
+
+        <% for(let j=0; j<servicios.length; j++) {%>
+          
+          <div class="container-producto-mobile">
+
+            <% if(servicios[j].imagenesServicios[0] == undefined){%>
+              <img src="" alt="" class="imagenProducto img-thumbnail">
+            
+            <% }else{%>
+              <img src="../images/servicios/<%= servicios[j].imagenesServicios[0].imagen %>" alt="" class="imagenProducto img-thumbnail">
+            
+            <% } %>
+  
+            <h2><%= servicios[j].nombre %></h2>
+            <p>Precio: <%= servicios[j].precio %></p>
+            <p>Precio con Descuento: <%= servicios[j].preciocondescuento %></p>
+            <label for="">Descripción Corta:</label>
+            <p class="paragraphdescripcion"><%= servicios[j].descripcion %></p>
+            <label for="">Descripción Larga:</label>
+            <p class="paragraphdescripcion"><%= servicios[j].descripcion_larga %></p>
+            <br>
+            <button type="button" class="btn btn-primary"><a href="/admin/servicios/<%= servicios[j].id %>" class="linkEditar">Modificar</a></button>
+            <br>
+            <button type="button" class="btn btn-danger"><a href="/admin/servicios/eliminar/<%= servicios[j].id %>" class="linkEditar">Eliminar</a></button>
+            <br>
+
+          </div>
+
+
+        <% } %>
+
+    </div>
+  </div>
+
+</body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

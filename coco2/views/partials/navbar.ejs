@@ -1,0 +1,86 @@
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <nav class="navbar navbar-expand-lg containerNavBar" style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>, <%= resultados[13].value %>);">
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark containerNavBar"> -->
+        
+        <img src="/images/logo/<%= resultados[7].value %>" alt="" width="100" class="imagenLogoNavBar">      
+        <!-- <a class="navbar-brand" href="/">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="rayas-dentro-boton-navbar">___</div>
+          <div class="rayas-dentro-boton-navbar">___</div>
+          <div class="rayas-dentro-boton-navbar">___</div>
+        </button>
+      
+        <div class="collapse navbar-collapse itemsNavBar" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto UlItemsNavBar">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nosotros">Nosotros</a>
+            </li>
+
+            <% if(existenProductos.length != 0) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/productos">Productos</a>
+              </li>
+              
+            <% } %>
+
+            <% if(existenServicios.length != 0) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/servicios">Servicios</a>
+              </li>
+            <% } %>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/casosdeexito">Casos de Éxito</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/blogs">Blogs</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/contactenos">Contáctenos</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form> -->
+
+
+          <!-- ÍCONO BASE DE DATOS. En caso de estar logueado el usuario administrador
+          le permite consultar y editar la base de datos. -->
+
+          <% if(usuarioLogueado != ''){ %>
+            <div class="container-link-usuario">
+              <a href="/admin" class="link-usuario"><i class="fas fa-database"></i></a>
+  
+            </div>
+  
+          <% } %>
+
+
+            <!-- ÍCONO USUARIO. Indica si está logueado o no el usuario
+            En caso de no estar logueado redirecciona a la vista de login -->
+
+          <% if(usuarioLogueado == ''){ %>
+            <div class="container-link-usuario">
+              <a href="/users" class="link-usuario"><i class="fas fa-user"></i></a>
+  
+            </div>
+  
+          <% }else{%>
+            <div class="container-link-usuario">
+              <a href="/users/logout" class="link-usuario"><i class="fas fa-user-slash"></i></a>
+  
+            </div>
+          <% }%>
+
+
+        </div>
+      </nav>
+  
+      <!-- FIN BARRA DE NAVEGACIÓN -->

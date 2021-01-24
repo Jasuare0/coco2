@@ -1,0 +1,116 @@
+.nav-link {
+    color: white;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link:active {
+    text-decoration:none;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link:active {
+    color: white;
+}
+
+.nav-link:hover {
+    color: grey;
+}
+
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+.navbar-toggler{
+    border-width: 1px;
+    border-color: grey;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-right: 0px;
+
+}
+
+.rayas-dentro-boton-navbar{
+
+    color:grey;
+    height: 10px;
+}
+
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+
+    .navbar-toggler{
+        border-width: 1px;
+        border-color: grey;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        padding-right: 0px;
+    
+    }
+    
+    .rayas-dentro-boton-navbar{
+    
+        color:grey;
+        height: 10px;
+    }
+    
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+
+
+    .navbar-toggler{
+        border-width: 1px;
+        border-color: grey;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        padding-right: 0px;
+    
+    }
+    
+    .rayas-dentro-boton-navbar{
+    
+        color:grey;
+        height: 10px;
+    }
+}
+
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    
+    .navbar-toggler{
+    
+        display: none;
+    
+    }
+    
+    .rayas-dentro-boton-navbar{
+    
+        display: none;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+
+    .navbar-toggler{
+    
+        display: none;
+    
+    }
+    
+    .rayas-dentro-boton-navbar{
+    
+        display: none;
+    }
+}

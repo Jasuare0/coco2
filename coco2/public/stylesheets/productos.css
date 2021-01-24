@@ -1,0 +1,178 @@
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+    .external-container-productos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+    }
+    
+    .internal-container-productos{
+        width: 100%;
+
+    
+    }
+    
+    .imagen-producto{
+        border-radius: 10%;
+        width: 100%;
+    }
+    
+    .internal-container-paragraph-productos{
+        width: 100%;
+    }
+    
+    .titulo-producto{
+        text-align: center;
+
+    }
+
+    .paragraph-producto{
+        text-align: justify;
+    }
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .external-container-productos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+    }
+    
+    .internal-container-productos{
+        width: 25%;
+        border-right: 2px solid grey;
+        padding-right: 20px;
+    
+    }
+    
+    .imagen-producto{
+        border-radius: 10%;
+        width: 100%;
+    }
+    
+    .internal-container-paragraph-productos{
+        width: 70%;
+    }
+    
+    .paragraph-producto{
+        text-align: justify;
+    }
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .external-container-productos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+    }
+    
+    .internal-container-productos{
+        width: 25%;
+        border-right: 2px solid grey;
+        padding-right: 20px;
+    
+    }
+    
+    .imagen-producto{
+        border-radius: 10%;
+        width: 100%;
+    }
+    
+    .internal-container-paragraph-productos{
+        width: 70%;
+    }
+    
+    .paragraph-producto{
+        text-align: justify;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .external-container-productos{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+    }
+    
+    .internal-container-productos{
+        width: 25%;
+        border-right: 2px solid grey;
+        padding-right: 20px;
+    
+    }
+    
+    .imagen-producto{
+        border-radius: 10%;
+        width: 100%;
+    }
+    
+    .internal-container-paragraph-productos{
+        width: 70%;
+    }
+    
+    .paragraph-producto{
+        text-align: justify;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .external-container-productos{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+    }
+    
+    .internal-container-productos{
+        width: 25%;
+        border-right: 2px solid grey;
+        padding-right: 20px;
+    
+    }
+    
+    .imagen-producto{
+        border-radius: 10%;
+        width: 100%;
+    }
+    
+    .internal-container-paragraph-productos{
+        width: 70%;
+    }
+    
+    .paragraph-producto{
+        text-align: justify;
+    }
+}

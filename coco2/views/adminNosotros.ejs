@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+    
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+    <link rel='stylesheet' href='/stylesheets/adminNosotros.css' />
+
+</head>
+<body>
+    
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+      </ol>
+    </nav>
+
+
+
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+        <form class="container-form-nosotros" action="/admin/nosotros" method="POST">
+          <div class="form-group">
+            <label for="sobreNosotros">Sobre Nosotros</label>
+            <textarea class="form-control" id="sobreNosotros" rows="3" name="sobreNosotros"><%= nosotros[0].value %></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="objetivo">Nuestro Objetivo y Enfoque</label>
+            <input type="text" class="form-control" id="objetivo" aria-describedby="emailHelp" value="<%= nosotros[1].value %>" name="objetivo">
+          </div>
+
+          
+          <div class="form-group">
+            <label for="mision">Misión</label>
+            <textarea class="form-control" id="mision" rows="3" name="mision"><%= nosotros[2].value %></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="vision">Visión</label>
+            <textarea class="form-control" id="vision" rows="3" name="vision"><%= nosotros[3].value %></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="titulovalor1">Título Valor 1</label>
+            <input type="text" class="form-control" id="titulovalor1" value="<%= nosotros[4].item %>" name="titulovalor1">
+
+            <label for="valor1">Descripción Valor 1</label>
+            <textarea class="form-control" id="valor1" rows="3" name="valor1"><%= nosotros[4].value %></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="titulovalor2">Título Valor 2</label>
+            <input type="text" class="form-control" id="titulovalor2" value="<%= nosotros[5].item %>" name="titulovalor2">
+
+            <label for="valor2">Valor 2</label>
+            <textarea class="form-control" id="valor2" rows="3" name="valor2"><%= nosotros[5].value %></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="titulovalor3">Título Valor 3</label>
+            <input type="text" class="form-control" id="titulovalor3" value="<%= nosotros[6].item %>" name="titulovalor3">
+
+            <label for="valor3">Valor 3</label>
+            <textarea class="form-control" id="valor3" rows="3" name="valor3"><%= nosotros[6].value %></textarea>
+          </div>
+    
+          <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+        </form>
+    
+      </div>
+
+    </div>
+
+
+</body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,125 @@
+
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+    .fa-key{
+        font-size: 130%;
+    }
+    
+    .external-container-section{
+        margin-top: 25vh;
+    }
+    
+    .container-form-login{
+        width: 100%;
+    }
+    
+    .internal-container-section{
+        border: 0.5px solid grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        width: 80%;
+        border-radius: 10px;
+    
+    }
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .fa-key{
+        font-size: 130%;
+    }
+    
+    .external-container-section{
+        margin-top: 25vh;
+    }
+    
+    .container-form-login{
+        width: 90%;
+    }
+    
+    .internal-container-section{
+        border: 0.5px solid grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+        border-radius: 10px;
+    
+    }
+
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .fa-key{
+        font-size: 130%;
+    }
+    
+    .external-container-section{
+        margin-top: 25vh;
+    }
+    
+    .container-form-login{
+        width: 90%;
+    }
+    
+    .internal-container-section{
+        border: 0.5px solid grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+        border-radius: 10px;
+    
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .fa-key{
+        font-size: 130%;
+    }
+    
+    .external-container-section{
+        margin-top: 25vh;
+    }
+    
+    .container-form-login{
+        width: 90%;
+    }
+    
+    .internal-container-section{
+        border: 0.5px solid grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+        border-radius: 10px;
+    
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .fa-key{
+        font-size: 130%;
+    }
+    
+    .external-container-section{
+        margin-top: 25vh;
+    }
+    
+    .container-form-login{
+        width: 90%;
+    }
+    
+    .internal-container-section{
+        border: 0.5px solid grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+        border-radius: 10px;
+    
+    }
+}

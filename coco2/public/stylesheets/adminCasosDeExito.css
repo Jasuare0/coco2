@@ -1,0 +1,216 @@
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+    table{
+        display: none;
+    }
+
+    th{
+        text-align: center;
+    }
+    
+    .thId{
+        width: 5%;
+    
+    }
+    
+    .thTitulo{
+        width: 15%;
+        
+    }
+    
+    .thImagen{
+        width: 15%;
+    }
+    
+    .thDescripcion{
+        width: 50%;
+    }
+    
+    .imagenCasoExito{
+        width: 100%;
+    }
+    
+    .tdTitulo{
+        text-align: center;
+    }
+    
+    .linkEditar{
+        color: white;
+        text-decoration: none;
+    }
+
+    .containerCasosExito{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tituloCasoMobile{
+        text-align: center;
+    }
+    p{
+        text-align: justify;
+        padding-top: 10px;
+    }
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+
+
+    th{
+        text-align: center;
+    }
+    
+    .thId{
+        width: 5%;
+    
+    }
+    
+    .thTitulo{
+        width: 15%;
+        
+    }
+    
+    .thImagen{
+        width: 15%;
+    }
+    
+    .thDescripcion{
+        width: 50%;
+    }
+    
+    .imagenCasoExito{
+        width: 100%;
+    }
+    
+    .tdTitulo{
+        text-align: center;
+    }
+    
+    .linkEditar{
+        color: white;
+        text-decoration: none;
+    }
+
+    .containerCasosExito{
+        display: none;
+    }
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+
+    th{
+        text-align: center;
+    }
+    
+    .thId{
+        width: 5%;
+    
+    }
+    
+    .thTitulo{
+        width: 15%;
+        
+    }
+    
+    .thImagen{
+        width: 15%;
+    }
+    
+    .thDescripcion{
+        width: 50%;
+    }
+    
+    .imagenCasoExito{
+        width: 100%;
+    }
+    
+    .tdTitulo{
+        text-align: center;
+    }
+    
+    .linkEditar{
+        color: white;
+        text-decoration: none;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+
+    th{
+        text-align: center;
+    }
+    
+    .thId{
+        width: 5%;
+    
+    }
+    
+    .thTitulo{
+        width: 15%;
+        
+    }
+    
+    .thImagen{
+        width: 15%;
+    }
+    
+    .thDescripcion{
+        width: 50%;
+    }
+    
+    .imagenCasoExito{
+        width: 100%;
+    }
+    
+    .tdTitulo{
+        text-align: center;
+    }
+    
+    .linkEditar{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+
+    th{
+        text-align: center;
+    }
+    
+    .thId{
+        width: 5%;
+    
+    }
+    
+    .thTitulo{
+        width: 15%;
+        
+    }
+    
+    .thImagen{
+        width: 15%;
+    }
+    
+    .thDescripcion{
+        width: 50%;
+    }
+    
+    .imagenCasoExito{
+        width: 100%;
+    }
+    
+    .tdTitulo{
+        text-align: center;
+    }
+    
+    .linkEditar{
+        color: white;
+        text-decoration: none;
+    }
+}

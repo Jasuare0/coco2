@@ -1,0 +1,286 @@
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+    .external-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .internal-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+
+    }
+    
+    .container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagen-blog{
+        width: 100%;
+        border-radius: 0px 40px 0px 40px;
+    }
+    
+    .header-vistas-likes{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .paragraph-blog-resumido{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .a-blog{
+        width: auto;
+        text-align: center;
+    }
+    
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .external-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .internal-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagen-blog{
+        width: 100%;
+        border-radius: 0px 40px 0px 40px;
+    }
+    
+    .header-vistas-likes{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .paragraph-blog-resumido{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .a-blog{
+        width: auto;
+        text-align: center;
+    }
+    
+
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .external-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .internal-container-blog{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagen-blog{
+        width: 100%;
+        border-radius: 0px 40px 0px 40px;
+    }
+    
+    .header-vistas-likes{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .paragraph-blog-resumido{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .a-blog{
+        width: auto;
+        text-align: center;
+    }
+    
+
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .external-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .internal-container-blog{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagen-blog{
+        width: 100%;
+        border-radius: 0px 40px 0px 40px;
+    }
+    
+    .header-vistas-likes{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .paragraph-blog-resumido{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .a-blog{
+        width: auto;
+        text-align: center;
+    }
+    
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .external-container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .internal-container-blog{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .container-blog{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagen-blog{
+        width: 100%;
+        border-radius: 0px 40px 0px 40px;
+    }
+    
+    .header-vistas-likes{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .paragraph-blog-resumido{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .a-blog{
+        width: auto;
+        text-align: center;
+    }
+    
+}
+

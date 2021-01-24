@@ -1,0 +1,374 @@
+
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+    .external-container-iconos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content:center;
+    
+    }
+    
+    .internal-container-iconos{
+        width: 100%;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 2%;
+    
+    }
+    
+    .a-icono{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .icono{
+        text-align: center;
+        font-size: 400%;
+        color: grey;
+    }
+    
+    .a-icono:hover{
+        background-color: grey;
+        border-radius: 50%;
+    }
+    
+    .a-icono:hover .header-icono{
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .a-icono:hover .icono{
+        color: white;
+        
+    }
+    .icono:hover{
+    
+        color: white;
+    
+    }
+    
+    .header-icono{
+        text-decoration: none;
+        color: grey;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .external-container-iconos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content:center;
+    
+    }
+    
+    .internal-container-iconos{
+        width: 50%;
+        height: 200px;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 2%;
+    
+    }
+    
+    .a-icono{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .icono{
+        text-align: center;
+        font-size: 400%;
+        color: grey;
+    }
+    
+    .a-icono:hover{
+        background-color: grey;
+        border-radius: 50%;
+    }
+    
+    .a-icono:hover .header-icono{
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .a-icono:hover .icono{
+        color: white;
+        
+    }
+    .icono:hover{
+    
+        color: white;
+    
+    }
+    
+    .header-icono{
+        text-decoration: none;
+        color: grey;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .external-container-iconos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content:center;
+    
+    }
+    
+    .internal-container-iconos{
+        width: 30%;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 2%;
+    
+    }
+    
+    .a-icono{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .icono{
+        text-align: center;
+        font-size: 400%;
+        color: grey;
+    }
+    
+    .a-icono:hover{
+        background-color: grey;
+        border-radius: 50%;
+    }
+    
+    .a-icono:hover .header-icono{
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .a-icono:hover .icono{
+        color: white;
+        
+    }
+    .icono:hover{
+    
+        color: white;
+    
+    }
+    
+    .header-icono{
+        text-decoration: none;
+        color: grey;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .external-container-iconos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content:center;
+    
+    }
+    
+    .internal-container-iconos{
+        width: 20%;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 2%;
+    
+    }
+    
+    .a-icono{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .icono{
+        text-align: center;
+        font-size: 400%;
+        color: grey;
+    }
+    
+    .a-icono:hover{
+        background-color: grey;
+        border-radius: 50%;
+    }
+    
+    .a-icono:hover .header-icono{
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .a-icono:hover .icono{
+        color: white;
+        
+    }
+    .icono:hover{
+    
+        color: white;
+    
+    }
+    
+    .header-icono{
+        text-decoration: none;
+        color: grey;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .external-container-iconos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content:center;
+    
+    }
+    
+    .internal-container-iconos{
+        width: 20%;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 2%;
+    
+    }
+    
+    .a-icono{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .icono{
+        text-align: center;
+        font-size: 400%;
+        color: grey;
+    }
+    
+    .a-icono:hover{
+        background-color: grey;
+        border-radius: 50%;
+    }
+    
+    .a-icono:hover .header-icono{
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .a-icono:hover .icono{
+        color: white;
+        
+    }
+    .icono:hover{
+    
+        color: white;
+    
+    }
+    
+    .header-icono{
+        text-decoration: none;
+        color: grey;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+
+}

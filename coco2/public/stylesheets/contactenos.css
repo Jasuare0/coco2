@@ -1,0 +1,231 @@
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+    .header-envianos-mensaje{
+        text-align: center;
+        width: 100%;
+    }
+    
+    .paragraph-envianos-mensaje{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .external-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: center;
+        
+    }
+    
+    .internal-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .container-izquierdo-formulario{
+        width: 100%;
+    }
+    
+    .container-derecho-formulario{
+        width: 100%;
+    }
+    
+    .container-boton{
+        width: 100%;
+    }
+
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .header-envianos-mensaje{
+        text-align: left;
+        width: 100%;
+    }
+    
+    .paragraph-envianos-mensaje{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .external-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: center;
+        
+    }
+    
+    .internal-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .container-izquierdo-formulario{
+        width: 100%;
+    }
+    
+    .container-derecho-formulario{
+        width: 100%;
+    }
+    
+    .container-boton{
+        width: 100%;
+    }
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .header-envianos-mensaje{
+        text-align: left;
+        width: 100%;
+    }
+    
+    .paragraph-envianos-mensaje{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .external-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: center;
+        
+    }
+    
+    .internal-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .container-izquierdo-formulario{
+        width: 45%;
+    }
+    
+    .container-derecho-formulario{
+        width: 50%;
+    }
+    
+    .container-boton{
+        width: 100%;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .header-envianos-mensaje{
+        text-align: left;
+        width: 100%;
+    }
+    
+    .paragraph-envianos-mensaje{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .external-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: center;
+        
+    }
+    
+    .internal-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .container-izquierdo-formulario{
+        width: 45%;
+    }
+    
+    .container-derecho-formulario{
+        width: 50%;
+    }
+    
+    .container-boton{
+        width: 100%;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .header-envianos-mensaje{
+        text-align: left;
+        width: 100%;
+    }
+    
+    .paragraph-envianos-mensaje{
+        text-align: justify;
+        width: 100%;
+    }
+    
+    .external-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: center;
+        
+    }
+    
+    .internal-container-formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    
+    .container-izquierdo-formulario{
+        width: 45%;
+    }
+    
+    .container-derecho-formulario{
+        width: 50%;
+    }
+    
+    .container-boton{
+        width: 100%;
+    }
+}

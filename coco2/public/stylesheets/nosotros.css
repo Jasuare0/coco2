@@ -1,0 +1,590 @@
+
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+    .external-container-header-nosotros{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .internal-container-header-nosotros{
+        width: 100%;
+        border-bottom: 2px solid grey;
+        margin-bottom: 20px;
+    
+    }
+    
+    .header-sobre-nosotros{
+        padding-top: 20px;
+        font-size: 350%;
+    
+    }
+    
+    .container-paragraph-nosotros{
+        width: 100%;
+    }
+    
+    .paragraph-nosotros{
+        text-align: justify;
+
+    }
+    
+    .paragraph-objetivo{
+        text-align: justify;
+    
+    }
+    
+    .external-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    
+    .internal-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .header-mision{
+        text-align: center;
+        width: 100%;
+
+    }
+    .header-vision{
+        text-align: center;
+        width: 100%;
+        
+    }
+
+    .paragraph-mision{
+        width: 100%;
+        text-align: justify;
+    }
+    
+    .paragraph-vision{
+        text-align: justify;
+    }
+    
+    .external-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    
+    }
+    
+    .internal-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .header-valor{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    .a-icono-valores{
+        width: 100%;
+        text-align: center;
+    
+    
+    }
+    
+    .icons-valores{
+        font-size: 400%;
+        color: black;
+    }
+    
+    .paragraph-valores{
+        text-align: justify;
+        margin-top: 30px;
+    
+    }
+
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+
+    .external-container-header-nosotros{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .internal-container-header-nosotros{
+        width: 30%;
+        border-top: 2px solid grey;
+    
+    }
+    
+    .header-sobre-nosotros{
+        padding-top: 20px;
+        font-size: 350%;
+    
+    }
+    
+    .container-paragraph-nosotros{
+        width: 50%;
+    }
+    
+    .paragraph-nosotros{
+        text-align: justify;
+    }
+    
+    .paragraph-objetivo{
+        text-align: justify;
+    
+    }
+    
+    .external-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    
+    .internal-container-mision-vision{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .paragraph-mision{
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .paragraph-vision{
+        text-align: justify;
+    }
+    
+    .external-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    
+    }
+    
+    .internal-container-valores{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .header-valor{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    .a-icono-valores{
+        width: 100%;
+        text-align: center;
+    
+    
+    }
+    
+    .icons-valores{
+        font-size: 400%;
+        color: black;
+    }
+    
+    .paragraph-valores{
+        text-align: justify;
+        margin-top: 30px;
+    
+    }
+
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+
+    .external-container-header-nosotros{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .internal-container-header-nosotros{
+        width: 30%;
+        border-top: 2px solid grey;
+    
+    }
+    
+    .header-sobre-nosotros{
+        padding-top: 20px;
+        font-size: 350%;
+    
+    }
+    
+    .container-paragraph-nosotros{
+        width: 50%;
+    }
+    
+    .paragraph-nosotros{
+        text-align: justify;
+    }
+    
+    .paragraph-objetivo{
+        text-align: justify;
+    
+    }
+    
+    .external-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    
+    .internal-container-mision-vision{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .paragraph-mision{
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .paragraph-vision{
+        text-align: justify;
+    }
+    
+    .external-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    
+    }
+    
+    .internal-container-valores{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .header-valor{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    .a-icono-valores{
+        width: 100%;
+        text-align: center;
+    
+    
+    }
+    
+    .icons-valores{
+        font-size: 400%;
+        color: black;
+    }
+    
+    .paragraph-valores{
+        text-align: justify;
+        margin-top: 30px;
+    
+    }
+
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+
+    .external-container-header-nosotros{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .internal-container-header-nosotros{
+        width: 30%;
+        border-top: 2px solid grey;
+    
+    }
+    
+    .header-sobre-nosotros{
+        padding-top: 20px;
+        font-size: 350%;
+    
+    }
+    
+    .container-paragraph-nosotros{
+        width: 50%;
+    }
+    
+    .paragraph-nosotros{
+        text-align: justify;
+    }
+    
+    .paragraph-objetivo{
+        text-align: justify;
+    
+    }
+    
+    .external-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    
+    .internal-container-mision-vision{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .paragraph-mision{
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .paragraph-vision{
+        text-align: justify;
+    }
+    
+    .external-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    
+    }
+    
+    .internal-container-valores{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .header-valor{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    .a-icono-valores{
+        width: 100%;
+        text-align: center;
+    
+    
+    }
+    
+    .icons-valores{
+        font-size: 400%;
+        color: black;
+    }
+    
+    .paragraph-valores{
+        text-align: justify;
+        margin-top: 30px;
+    
+    }
+
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+
+    .external-container-header-nosotros{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .internal-container-header-nosotros{
+        width: 30%;
+        border-top: 2px solid grey;
+    
+    }
+    
+    .header-sobre-nosotros{
+        padding-top: 20px;
+        font-size: 350%;
+    
+    }
+    
+    .container-paragraph-nosotros{
+        width: 50%;
+    }
+    
+    .paragraph-nosotros{
+        text-align: justify;
+    }
+    
+    .paragraph-objetivo{
+        text-align: justify;
+    
+    }
+    
+    .external-container-mision-vision{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    
+    .internal-container-mision-vision{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .paragraph-mision{
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .paragraph-vision{
+        text-align: justify;
+    }
+    
+    .external-container-valores{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-around;
+    
+    }
+    
+    .internal-container-valores{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items:flex-start;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .header-valor{
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    .a-icono-valores{
+        width: 100%;
+        text-align: center;
+    
+    
+    }
+    
+    .icons-valores{
+        font-size: 400%;
+        color: black;
+    }
+    
+    .paragraph-valores{
+        text-align: justify;
+        margin-top: 30px;
+    
+    }
+
+
+}

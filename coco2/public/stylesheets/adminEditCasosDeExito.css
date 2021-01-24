@@ -1,0 +1,18 @@
+.formularioCasosDeExito {
+    width: 100%;
+}
+
+.container-ImagenCasoDeExito{
+    width: 100%;
+}
+
+.imagenCasoDeExito{
+    width: 15%;
+}
+
+.formularioCasosDeExito{
+    border: 1px dotted grey;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}

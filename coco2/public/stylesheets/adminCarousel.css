@@ -1,0 +1,9 @@
+.formulario{
+    width: 100%;
+    border: 1px dotted rgba(238, 230, 228,1);
+    padding: 20px;
+}
+
+.imagenCarousel{
+    width: 30%;
+}

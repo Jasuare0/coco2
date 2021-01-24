@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+        
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/contactenos.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+
+    <!-- FUENTES -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="<%= fuentes[0].link %>" rel="stylesheet">
+
+
+</head>
+<body style="background-color: rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>, <%= resultados[17].value %>);<%= fuentes[0].css %>">
+    
+    
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <!-- INICIO CARROUSEL DE IMAGENES -->
+
+    <%- include('./partials/carousel') %>
+
+    <!-- FIN CARROUSEL DE IMAGENES -->
+    
+
+
+      <div class="external-container-section">
+
+        <div class="internal-container-section">
+          <h2 class="header-section">CONTÁCTENOS</h2>
+        </div>
+  
+      </div>
+
+
+      <div class="external-container-section">
+
+        <div class="internal-container-section">
+          <h2 class="header-envianos-mensaje">ENVÍANOS TU MENSAJE</h2>
+          <p class="paragraph-envianos-mensaje">Nos interesa conocer tu opinión y ayudarte a solucionar todas tus consultas. Dejanos tu comentario y nos contactaremos a la brevedad. Los campos marcados con * son obligatorios:</p>
+        </div>
+  
+      </div>
+
+      
+
+      <div class="external-container-section">
+
+        <div class="internal-container-section">
+
+          <form class="external-container-formulario" method="POST" action="/contactenos/enviandomail">
+            <div class="internal-container-formulario">
+              <div class="container-izquierdo-formulario">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="*Nombre y Apellido" name="nombre">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Email" name="email">
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="*Teléfono"  name="telefono">
+                </div>
+    
+              </div>
+              <div class="container-derecho-formulario">
+                <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="*Consultas/Comentarios" name="comentario"></textarea>
+                </div>
+    
+              </div>
+  
+            </div>
+            <div class="container-boton">
+              <input type="hidden" value="<%= resultados[5].value %>" name="emailEmpresa">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+
+            </div>
+          </form>   
+        </div>
+  
+      </div>
+
+   
+
+      
+    <!-- INICIO FOOTER -->
+
+    <%- include('./partials/datosContacto') %>
+
+    <!-- FIN FOOTER -->
+
+
+
+    <!-- INICIO FOOTER -->
+
+    <%- include('./partials/footer') %>
+
+    <!-- FIN FOOTER -->
+
+
+</body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

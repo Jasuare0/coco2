@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+    
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' href='/stylesheets/adminEditProducto.css' />
+
+</head>
+<body>
+    
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+        <li class="breadcrumb-item"><a href="/admin/servicio">Servicios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar Servicios</li>
+      </ol>
+    </nav>
+
+
+    
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+        <form class="container-form" action="/admin/servicios/<%= servicio.id %>" method="POST" enctype="multipart/form-data">
+        
+          <div class="form-group">
+            <label for="nombre">Nombre del Servicio</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" value="<%= servicio.nombre %>" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción Corta del Servicio</label>
+            <textarea class="form-control" id="descripcion" rows="3" name="descripcion"><%= servicio.descripcion %></textarea>
+          </div>
+          <div class="form-group">
+            <label for="descripcionLarga">Descripción Larga del Servicio</label>
+            <textarea class="form-control" id="descripcionLarga" rows="3" name="descripcionLarga"><%= servicio.descripcion_larga %></textarea>
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="text" class="form-control" id="precio" aria-describedby="precio" value="<%= servicio.precio %>" name="precio">
+          </div>
+          <div class="form-group">
+            <label for="preciocondescuento">Precio con Descuento</label>
+            <input type="text" class="form-control" id="preciocondescuento" aria-describedby="preciocondescuento" value="<%= servicio.preciocondescuento %>" name="preciocondescuento">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+        </form>
+    
+    
+      </div>
+
+    </div>
+
+
+    <% for(let j=0; j<5; j++) { %>
+
+      <% if(j<servicio.imagenesServicios.length) {%>
+      
+        <div class="external-container-section">
+
+          <div class="internal-container-section">
+    
+            <form class="container-form" action="/admin/servicios/<%= servicio.id %>/cambiarimagen/<%= servicio.imagenesServicios[j].id %>" method="POST" enctype="multipart/form-data">
+            
+              <div class="form-group">
+                <label>IMAGEN SERVICIO <%= j+1 %></label>
+                <br/>
+                <img src="/images/servicios/<%= servicio.imagenesServicios[j].imagen %>" alt="..." class="img-thumbnail imagenCarousel">
+              </div>
+    
+    
+              <div class="form-group">
+                <label for="cambiarImagen">Cambiar Imagen</label>
+                <input type="file" class="form-control-file" id="cambiarImagen" name="imagenNuevaBlog">
+                <small id="emailHelp" class="form-text text-muted">Recomendaciones: </small>
+                <small id="emailHelp" class="form-text text-muted">- Todas las imágenes del carrousel deberán presentar el mismo tamaño, para preservar las proporciones y estética de la página. </small>
+                <small id="emailHelp" class="form-text text-muted">- Tamaños recomendados Ancho x Alto </small>
+                <small id="emailHelp" class="form-text text-muted">- Resolución de la imagen. </small>
+                <small id="emailHelp" class="form-text text-muted">- Tamaño máximo de la imagen. </small>
+    
+              </div>
+    
+    
+              <button type="submit" class="btn btn-primary">Actualizar Imagen</button>
+              <button type="button" class="btn btn-danger"><a href="/admin/servicios/<%= servicio.id %>/eliminarimagen/<%= servicio.imagenesServicios[j].id %>" class="botonEliminar">Eliminar Imagen</a></button>
+            </form>
+        
+        
+          </div>
+    
+        </div>
+  
+
+      <% }else{ %>
+
+        <div class="external-container-section">
+
+          <div class="internal-container-section">
+    
+            <form class="container-form" action="/admin/servicios/<%= servicio.id %>/sumarimagenservicio" method="POST" enctype="multipart/form-data">
+            
+              <div class="form-group">
+                <label>IMAGEN SERVICIO <%= j+1 %></label>
+                <br/>
+                <small id="emailHelp" class="form-text text-muted">Puede sumar una imagen nueva de servicio. </small>
+                <small id="emailHelp" class="form-text text-muted">Se permite un Máximo de 5 imágenes por Servicio, aunque no es obligatorio tener que subir esta cantidad, se recomienda subir al menos 1 imagen por servicio.</small>
+              </div>
+    
+    
+              <div class="form-group">
+                <label for="cambiarImagen">Seleccionar Imagen</label>
+                <input type="file" class="form-control-file" id="cambiarImagen" name="imagenNuevaBlog">
+                <small id="emailHelp" class="form-text text-muted">Recomendaciones: </small>
+                <small id="emailHelp" class="form-text text-muted">- Todas las imágenes del carrousel deberán presentar el mismo tamaño, para preservar las proporciones y estética de la página. </small>
+                <small id="emailHelp" class="form-text text-muted">- Tamaños recomendados Ancho x Alto </small>
+                <small id="emailHelp" class="form-text text-muted">- Resolución de la imagen. </small>
+                <small id="emailHelp" class="form-text text-muted">- Tamaño máximo de la imagen. </small>
+    
+              </div>
+    
+    
+              <button type="submit" class="btn btn-primary">Subir Imagen</button>
+              <button type="button" class="btn btn-danger" disabled>Eliminar Imagen</button>
+            </form>
+        
+        
+          </div>
+    
+        </div>
+  
+      <% } %>
+
+  
+
+    <% } %>
+
+
+
+
+    
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+        <form class="container-form">
+
+          <% for(let i=0; i<3; i ++) { %>
+
+            <% if(i<caracteristicas.length) {%>
+              <div class="form-group">
+                <label for="caracteristica<%= i %>">Característica <%= i + 1 %> del Servicio </label>
+                <input type="text" class="form-control" id="caracteristica<%= i %>" value="<%= caracteristicas[i].caracteristica %>" name="caracteristica" disabled>
+                <br>
+                <textarea class="form-control" id="caracteristica<%= i %>" rows="3" name="descripcionCaracteristica" disabled><%= caracteristicas[i].descripcion %></textarea>
+                <br>
+                <img src="/images/caracteristicasservicios/<%= caracteristicas[i].imagen %>" class="img-thumbnail imagenServicio">
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary"><a href="/admin/servicios/<%= servicio.id %>/caracteristicas/<%= caracteristicas[i].id %>" class="linkEditar">Editar</a></button>
+                <button type="button" class="btn btn-danger"><a href="/admin/servicios/<%= servicio.id %>/caracteristicas/eliminar/<%= caracteristicas[i].id %>" class="linkEditar">Eliminar</a></button>
+  
+              </div>
+              
+            <% }else{%>
+              <div class="form-group">
+                <label for="caracteristica<%= i %>">Característica <%= i + 1 %> del Servicio </label>
+                <input type="text" class="form-control" id="caracteristica<%= i %>" name="caracteristica" disabled>
+                <br>
+                <textarea class="form-control" id="caracteristica<%= i %>" rows="3" name="descripcionCaracteristica" disabled></textarea>
+                <br>
+
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary"><a href="/admin/servicios/<%= servicio.id %>/caracteristicas" class="linkEditar">Sumar Caracteristica</a></button>
+                <button type="button" class="btn btn-danger" disabled>Eliminar</button>
+  
+              </div>
+              
+            
+            <% } %>
+
+
+          <% } %>
+
+        </form>
+    
+      </div>
+
+    </div>
+
+
+</body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

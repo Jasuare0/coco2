@@ -1,0 +1,351 @@
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+    .imagenLogo{
+        width: 20%;
+    }
+
+    .container-form{
+        width: 100%;
+    }
+
+    .tabla-imagenes-carrousel{
+        display:none;        
+    }
+
+    .external-container-imagenes-carrousel{
+        width: 100%;
+    }
+
+    .internal-container-imagenes-carrousel{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+    }
+
+    .tabla-productos-inicio{
+        display:none;     
+    }
+
+    .external-container-productos-inicio{
+        width: 100%;        
+    }
+
+    .internal-container-productos-inicio{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+    }
+
+
+    .tabla-clientes{
+        display:none;     
+    }
+
+    .external-container-clientes{
+        width: 100%;        
+    }
+
+    .internal-container-clientes{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+    }
+
+
+    .table{
+        width: 100%;
+    }
+
+
+    .tabla-columna-numero{
+        width: 5%;
+    }
+    .tabla-columna-imagen{
+        width: 25%;
+    }
+    
+    .tabla-columna-nombre{
+        width: 15%;
+    }
+    
+    .tabla-columna-descripcion{
+        width: 35%;
+        
+    }
+    .tabla-columna-nombreArchivo{
+        width: 35%;
+    
+    }
+    
+    .imagenes-aliados{
+        width: 50%;
+    }
+    
+    .linkEditar:link, .linkEditar:visited, .linkEditar:active {
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes{
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes:link, .linksClientes:visited, .linksClientes:active {
+        text-decoration:none;
+        color: white;
+    }
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+
+
+    .imagenLogo{
+        width: 20%;
+    }
+
+
+    .container-form{
+        width: 100%;
+        
+    }
+    
+
+
+    .external-container-imagenes-carrousel{
+        display:none;
+    }
+
+    .internal-container-imagenes-carrousel{
+        display:none;
+    }
+
+
+    .external-container-productos-inicio{
+        display:none;
+    }
+
+    .internal-container-productos-inicio{
+        display:none;
+    }
+
+    
+    .external-container-clientes{
+        display:none;
+    }
+
+    .internal-container-clientes{
+        display:none;
+    }
+
+
+    .tabla-columna-numero{
+        width: 5%;
+    }
+    .tabla-columna-imagen{
+        width: 25%;
+    }
+    
+    .tabla-columna-nombre{
+        width: 15%;
+    }
+    
+    .tabla-columna-descripcion{
+        width: 35%;
+        
+    }
+    .tabla-columna-nombreArchivo{
+        width: 35%;
+    
+    }
+    
+    .imagenes-aliados{
+        width: 50%;
+    }
+    
+    .linkEditar:link, .linkEditar:visited, .linkEditar:active {
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes{
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes:link, .linksClientes:visited, .linksClientes:active {
+        text-decoration:none;
+        color: white;
+    }
+
+}
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+
+    
+    .imagenLogo{
+        width: 20%;
+    }
+
+
+    .container-form{
+        width: 100%;
+        
+    }
+    
+    .tabla-columna-numero{
+        width: 5%;
+    }
+    .tabla-columna-imagen{
+        width: 25%;
+    }
+    
+    .tabla-columna-nombre{
+        width: 15%;
+    }
+    
+    .tabla-columna-descripcion{
+        width: 35%;
+        
+    }
+    .tabla-columna-nombreArchivo{
+        width: 35%;
+    
+    }
+    
+    .imagenes-aliados{
+        width: 50%;
+    }
+    
+    .linkEditar:link, .linkEditar:visited, .linkEditar:active {
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes{
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes:link, .linksClientes:visited, .linksClientes:active {
+        text-decoration:none;
+        color: white;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    
+    .imagenLogo{
+        width: 20%;
+    }
+
+    .container-form{
+        width: 100%;
+        
+    }
+    
+    .tabla-columna-numero{
+        width: 5%;
+    }
+    .tabla-columna-imagen{
+        width: 25%;
+    }
+    
+    .tabla-columna-nombre{
+        width: 15%;
+    }
+    
+    .tabla-columna-descripcion{
+        width: 35%;
+        
+    }
+    .tabla-columna-nombreArchivo{
+        width: 35%;
+    
+    }
+    
+    .imagenes-aliados{
+        width: 50%;
+    }
+    
+    .linkEditar:link, .linkEditar:visited, .linkEditar:active {
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes{
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes:link, .linksClientes:visited, .linksClientes:active {
+        text-decoration:none;
+        color: white;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+
+    
+    .imagenLogo{
+        width: 20%;
+    }
+
+
+    .container-form{
+        width: 100%;
+        
+    }
+    
+    .tabla-columna-numero{
+        width: 5%;
+    }
+    .tabla-columna-imagen{
+        width: 25%;
+    }
+    
+    .tabla-columna-nombre{
+        width: 15%;
+    }
+    
+    .tabla-columna-descripcion{
+        width: 35%;
+        
+    }
+    .tabla-columna-nombreArchivo{
+        width: 35%;
+    
+    }
+    
+    .imagenes-aliados{
+        width: 50%;
+    }
+    
+    .linkEditar:link, .linkEditar:visited, .linkEditar:active {
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes{
+        text-decoration:none;
+        color: white;
+    }
+    
+    .linksClientes:link, .linksClientes:visited, .linksClientes:active {
+        text-decoration:none;
+        color: white;
+    }
+}
+

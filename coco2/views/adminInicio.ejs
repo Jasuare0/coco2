@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+    
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+    <link rel='stylesheet' href='/stylesheets/adminInicio.css' />
+
+</head>
+<body>
+    
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+      </ol>
+    </nav>
+    
+    
+    <div class="external-container-section">
+
+        <div class="internal-container-section">
+
+          <!-- INICIO LOGO -->
+
+          <form class="container-form" action="/admin/logo" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+              <label>Imagen Logo:</label>
+              <br/>
+              <img src="/images/logo/<%= resultados[7].value %>" alt="..." class="img-thumbnail imagenLogo">
+            </div>
+  
+  
+            <div class="form-group">
+              <label for="cambiarLogo">Cambiar Imagen Logo:</label>
+              <input type="file" class="form-control-file" id="cambiarLogo" name="imagenNuevaLogo">
+              <small id="emailHelp" class="form-text text-muted">Recomendaciones: </small>
+              <small id="emailHelp" class="form-text text-muted">- Todas las imágenes del carrousel deberán presentar el mismo tamaño, para preservar las proporciones y estética de la página. </small>
+              <small id="emailHelp" class="form-text text-muted">- Tamaños recomendados Ancho x Alto </small>
+              <small id="emailHelp" class="form-text text-muted">- Resolución de la imagen. </small>
+              <small id="emailHelp" class="form-text text-muted">- Tamaño máximo de la imagen. </small>
+  
+            </div>
+  
+  
+            <button type="submit" class="btn btn-primary">Cambiar Imagen</button>
+          
+            <br>
+            <br>
+            <br>
+          </form>
+
+          <!-- FIN LOGO -->
+
+            <form class="container-form" method="POST" action="/admin/inicio">
+                <div class="form-group">
+                  <label for="slogan">Slogan / Frase de Valor</label>
+                  <input type="text" class="form-control" id="slogan" aria-describedby="emailHelp" value="<%= resultado[0].value %>" name="slogan">
+                </div>
+                <div class="form-group">
+                  <div class="form-group">
+                    <label for="conocenos">Conócenos</label>
+                    <textarea class="form-control" id="conocenos" rows="3" name="conocenos"><%= resultado[1].value %></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="productosservicios">Nuestros Productos / Servicios</label>
+                    <input type="text" class="form-control" id="productosservicios" value="<%= resultado[2].value %>" name="productosservicios">
+                </div>
+                
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp" value="<%= resultado[3].value %>" name="direccion">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" aria-describedby="emailHelp" value="<%= resultado[4].value %>" name="telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="<%= resultado[5].value %>" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="coordenadas">Coordenadas Google Maps</label>
+                    <input type="text" class="form-control" id="coordenadas" aria-describedby="emailHelp" value="<%= resultado[6].value %>" name="coordenadas">
+                    <small id="emailHelp" class="form-text text-muted">(Ej. 6.204314,-75.570815) - Las mismas pueden consultarse en <a href="https://www.google.com.ar/maps">https://www.google.com.ar/maps </a>. </small>
+                  </div>
+
+                <button type="submit" class="btn btn-primary">Actualizar datos</button>
+
+            </form>
+        </div>
+  
+    </div>
+
+    
+      
+    <div class="external-container-section">
+
+        <div class="internal-container-section">
+
+            <h2 for="exampleInputPassword1">Imagenes Carrousel</h2>
+            <table class="table table-hover tabla-imagenes-carrousel">
+                <thead>
+                  <tr>
+                    <th scope="col" class="tabla-columna-numero">#</th>
+                    <th scope="col" class="tabla-columna-imagen">Imagen</th>
+                    <th scope="col" class="tabla-columna-nombreArchivo">Nombre Archivo</th>
+                    <th scope="col" class="tabla-columna-nombre">Ubicación</th>
+                    <th scope="col" class="tabla-columna-editar">Editar</th>
+                    <th scope="col" class="tabla-columna-eliminar">Eliminar</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for(let j=0; j<carouseles.length; j++) { %>
+                    <tr>
+                      <th scope="row"><%= j + 1 %></th>
+                      <td><img src="../images/carousel/<%= carouseles[j].imagen %>" alt="..." class="img-thumbnail imagenes-aliados"></td>
+                      <td><%= carouseles[j].imagen %></td>
+                      <td><%= carouseles[j].ubicacion %></td>
+                      <td><button type="button" class="btn btn-primary"><a href="/admin/inicio/carousel/<%= carouseles[j].id %>" class="linkEditar">Editar</a></button></td>
+                      <td><button type="button" class="btn btn-danger"><a href="/admin/inicio/carousel/eliminar/<%= carouseles[j].id %>" class="linkEditar">Eliminar</a></button></td>
+                    </tr>
+  
+                  <% } %>
+                </tbody>
+            </table>
+
+            
+            <button type="button" class="btn btn-primary"><a href="/admin/inicio/carousel/crear" class="crearCliente linksClientes"> + Agregar Imagen al Carrousel</a></button>
+
+
+        </div>
+  
+    </div>
+
+
+      
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+        <div class="external-container-imagenes-carrousel">
+            <% for(let jj=0; jj<carouseles.length; jj++) { %>
+              <div class="internal-container-imagenes-carrousel">
+          
+                <h3>#</h3>
+                <p><%= jj + 1 %></p>
+                <h4>Nombre Archivo</h4>
+                <td><%= carouseles[jj].imagen %></td>
+                <h4>Imagen</h4>
+                <img src="../images/carousel/<%= carouseles[jj].imagen %>" alt="..." class="img-thumbnail imagenes-aliados">
+                <button type="button" class="btn btn-primary"><a href="/admin/inicio/carousel/<%= carouseles[jj].id %>" class="linkEditar">Editar</a></button></td>
+                <button type="button" class="btn btn-danger"><a href="/admin/inicio/carousel/eliminar/<%= carouseles[jj].id %>" class="linkEditar">Eliminar</a></button></td>
+              </div>
+      
+            <% } %>
+  
+        </div>
+    
+      </div>
+    </div>
+
+
+    <div class="external-container-section">
+
+        <div class="internal-container-section">
+
+            <h2 for="exampleInputPassword1">Productos en la Página de Inicio</h2>
+            <table class="table table-hover tabla-productos-inicio">
+                <thead>
+                  <tr>
+                    <th scope="col" class="tabla-columna-numero">#</th>
+                    <th scope="col" class="tabla-columna-imagen">Imagen</th>
+                    <th scope="col" class="tabla-columna-nombre">Nombre</th>
+                    <th scope="col" class="tabla-columna-descripcion">Descripción Corta</th>
+                    <th scope="col" class="tabla-columna-editar">Editar</th>
+                    <th scope="col" class="tabla-columna-eliminar">Eliminar</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for(let j=0; j<productos.length; j++) {%>
+                    <tr>
+                      <th scope="row"><%= productos[j].id %></th>
+                      <% if(productos[j].imagenesProductos != '') {%>
+                        <td><img src="../images/productos/<%= productos[j].imagenesProductos[0].imagen %>" alt="..." class="img-thumbnail imagenes-aliados"></td>
+                      
+                      <% }else{ %>
+                        <td></td>
+                      
+                      <% } %>
+                      <td><%= productos[j].nombre %></td>
+                      <td><%= productos[j].descripcion %></td>
+                      <td><button type="button" class="btn btn-primary"><a href="/admin/productos/<%= productos[j].id %>" class="linksClientes">Editar</a></button></td>
+                      <td><button type="button" class="btn btn-danger"><a href="/admin/productos/<%= productos[j].id %>/sacardelcarousel" class="linksClientes">Eliminar</a></button></td>
+                    </tr>
+  
+
+                  <% } %>
+                </tbody>
+              </table>
+
+              <button type="button" class="btn btn-primary"><a href="/admin/inicio/productos" class="linksClientes"> + Agregar Producto a la Página de Inicio</a></button>
+
+        </div>
+  
+    </div>
+
+
+
+
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+          <h2 for="exampleInputPassword1">Servicios en la Página de Inicio</h2>
+          <table class="table table-hover tabla-productos-inicio">
+              <thead>
+                <tr>
+                  <th scope="col" class="tabla-columna-numero">#</th>
+                  <th scope="col" class="tabla-columna-imagen">Imagen</th>
+                  <th scope="col" class="tabla-columna-nombre">Nombre</th>
+                  <th scope="col" class="tabla-columna-descripcion">Descripción Corta</th>
+                  <th scope="col" class="tabla-columna-editar">Editar</th>
+                  <th scope="col" class="tabla-columna-eliminar">Eliminar</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <% for(let j=0; j<servicios.length; j++) {%>
+                  <tr>
+                    <th scope="row"><%= servicios[j].id %></th>
+                    <% if(servicios[j].imagenesServicios != '' && servicios[j].imagenesServicios != null) {%>
+                      <td><img src="../images/servicios/<%= servicios[j].imagenesServicios[0].imagen %>" alt="..." class="img-thumbnail imagenes-aliados"></td>
+                    
+                    <% }else{ %>
+                      <td></td>
+                    
+                    <% } %>
+                    <td><%= servicios[j].nombre %></td>
+                    <td><%= servicios[j].descripcion %></td>
+                    <td><button type="button" class="btn btn-primary"><a href="/admin/servicios/<%= servicios[j].id %>" class="linksClientes">Editar</a></button></td>
+                    <td><button type="button" class="btn btn-danger"><a href="/admin/servicios/<%= servicios[j].id %>/sacardelcarousel" class="linksClientes">Eliminar</a></button></td>
+                  </tr>
+
+
+                <% } %>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-primary"><a href="/admin/inicio/servicios" class="linksClientes"> + Agregar Servicio a la Página de Inicio</a></button>
+
+      </div>
+
+  </div>
+
+
+
+
+
+
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+        <div class="external-container-productos-inicio">
+          <% for(let zz=0; zz<productos.length; zz++) { %>
+            <div class="internal-container-productos-inicio">
+
+              
+              <h3>#</h3>
+              <p><%= productos[zz].id %></p>
+              <h4>Imagen</h4>
+                <% if(productos[zz].imagenesProductos != '') {%>
+                  <img src="../images/productos/<%= productos[zz].imagenesProductos[0].imagen %>" alt="..." class="img-thumbnail imagenes-aliados">
+                
+                <% }else{ %>
+                  <p></p>
+                
+                <% } %>
+
+              <h4>Nombre</h4>
+              <p><%= productos[zz].nombre %></p>
+
+              <h4>Descripción Corta</h4>
+              <p><%= productos[zz].descripcion %></p>
+              <button type="button" class="btn btn-primary"><a href="/admin/productos/<%= productos[zz].id %>" class="linksClientes">Editar</a></button>
+              <button type="button" class="btn btn-danger"><a href="/admin/productos/<%= productos[zz].id %>/sacardelcarousel" class="linksClientes">Eliminar</a></button>
+
+            </div>
+          <% } %>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="external-container-section">
+
+        <div class="internal-container-section">
+
+            <h2>Clientes / Aliados</h2>
+
+            <table class="table table-hover tabla-clientes">
+                <thead>
+                  <tr>
+                    <th scope="col" class="tabla-columna-numero">#</th>
+                    <th scope="col" class="tabla-columna-imagen">Imagen</th>
+                    <th scope="col" class="tabla-columna-nombre">Nombre</th>
+                    <th scope="col" class="tabla-columna-nombreArchivo">Nombre Archivo</th>
+                    <th scope="col" class="tabla-columna-editar">Editar</th>
+                    <th scope="col" class="tabla-columna-eliminar">Eliminar</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <% for(let i=0; i<clientes.length; i++) { %>
+                  <tr>
+                    <th scope="row"><%= i+1 %></th>
+                    <td><img src="../images/clientesAliados/<%= clientes[i].imagen %>" alt="..." class="img-thumbnail imagenes-aliados"></td>
+                    <td><%= clientes[i].nombre %></td>
+                    <td><%= clientes[i].imagen %></td>
+                    <td><button type="button" class="btn btn-primary"><a href="/admin/inicio/clientes/<%= clientes[i].id %>" class="linksClientes">Editar</a></button></td>
+                    <td><button type="button" class="btn btn-danger"><a href="/admin/inicio/clientes/borrar/<%= clientes[i].id %>"  class="linksClientes">Eliminar</a></button></td>
+                  </tr>
+
+                  <% } %>
+
+                  </tbody>
+              </table>
+
+              <button type="button" class="btn btn-primary"><a href="/admin/inicio/clientes/crear" class="crearCliente linksClientes"> + Crear Cliente/Aliado</a></button>
+
+
+        </div>
+  
+    </div>
+
+
+
+
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+
+        <div class="external-container-clientes">
+
+          <% for(let ij=0; ij<clientes.length; ij++) { %>
+            <div class="internal-container-clientes">
+              <h3>#</h3>
+              <p><%= ij+1 %></p>
+              <h4>Imagen</h4>
+              <img src="../images/clientesAliados/<%= clientes[ij].imagen %>" alt="..." class="img-thumbnail imagenes-aliados">
+              <h4>Nombre</h4>
+              <p><%= clientes[ij].nombre %></p>
+              <h4>Nombre Archivo</h4>
+              <p><%= clientes[ij].imagen %></p>
+              <button type="button" class="btn btn-primary"><a href="/admin/inicio/clientes/<%= clientes[ij].id %>" class="linksClientes">Editar</a></button>
+              <button type="button" class="btn btn-danger"><a href="/admin/inicio/clientes/borrar/<%= clientes[ij].id %>"  class="linksClientes">Eliminar</a></button>
+                    
+            </div>
+
+            <% } %>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="external-container-section">
+
+      <div class="internal-container-section">
+        <h2>Redes Sociales</h2>
+
+        <form class="container-form" method="POST" action="/admin/inicio/redessociales">
+          <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" class="form-control" id="facebook" aria-describedby="emailHelp" value="<%= redessociales[0].direccionhtml %>" name="facebook">
+            <small id="emailHelp" class="form-text text-muted">(Ej. https://www.facebook.com/innovatecol ) </small>
+
+            
+          </div>
+          <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="text" class="form-control" id="instagram" aria-describedby="emailHelp" value="<%= redessociales[1].direccionhtml %>" name="instagram">
+            <small id="emailHelp" class="form-text text-muted">(Ej. https://instagram.com/innovatesas?igshid=uw1w1o9w8aeu ) </small>
+          </div>
+          <div class="form-group">
+            <label for="youtube">Youtube</label>
+            <input type="text" class="form-control" id="youtube" aria-describedby="emailHelp" value="<%= redessociales[2].direccionhtml %>" name="youtube">
+            <small id="emailHelp" class="form-text text-muted">(Ej. https://www.youtube.com/channel/UCRd7ceQqLlVqe1UDjxubmjQ ) </small>
+          
+          </div>
+          <div class="form-group">
+            <label for="twitter">Twitter</label>
+            <input type="text" class="form-control" id="twitter" aria-describedby="emailHelp" value="<%= redessociales[3].direccionhtml %>" name="twitter">
+            <small id="emailHelp" class="form-text text-muted">(Ej.   https://twitter.com/search?q=%40pepsiargentina&src=typed_query ) </small>
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input type="text" class="form-control" id="linkedin" aria-describedby="emailHelp" value="<%= redessociales[4].direccionhtml %>" name="linkedin">
+            <small id="emailHelp" class="form-text text-muted">(Ej. https://co.linkedin.com/company/innovatesas ) </small>
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">Whatsapp</label>
+            <input type="text" class="form-control" id="whatsapp" aria-describedby="emailHelp" value="<%= redessociales[5].direccionhtml %>" name="whatsapp">
+            <small id="emailHelp" class="form-text text-muted">(Ej. 05491158572354)  (Esto corresponde a código país + código para llamadas a celular + teléfono celular) </small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Actualizar los datos de las Redes Sociales</button>
+
+      </form>
+
+      </div>
+    </div>
+
+  </body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

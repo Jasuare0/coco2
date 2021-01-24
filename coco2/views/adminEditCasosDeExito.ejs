@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+
+    
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+    <link rel='stylesheet' href='/stylesheets/adminEditCasosDeExito.css' />
+
+</head>
+<body>
+    
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+        <li class="breadcrumb-item"><a href="/admin/casosdeexito">Casos de Éxito</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edición Casos de Éxito</li>
+      </ol>
+    </nav>
+
+
+    <div class="external-container-section contenedortabla">
+
+      <div class="internal-container-section">
+
+
+        <form class="formularioCasosDeExito" method="POST" action="/admin/casosdeexito/actualizar/<%= casosdeexito[0].id %>">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" value="<%= casosdeexito[0].titulo %>" name="titulo">
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <input type="text" class="form-control" id="descripcion" value="<%= casosdeexito[0].descripcion %>" name="descripcion">
+          </div>
+          <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+          <br>
+          <br>
+
+        </form>
+
+        <% for(let i=0; i<5; i++) { %>
+          <% if(i<casosdeexito[0].imagenesCasosDeExito.length && casosdeexito[0].imagenesCasosDeExito != '') {%>
+            <form class="formularioCasosDeExito" method="POST" action="/admin/casosdeexito/actualizar/imagen/<%= casosdeexito[0].imagenesCasosDeExito[i].id %>" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="descripcion">Imagen <%= i+1 %></label>
+                <div class="container-ImagenCasoDeExito">
+                    <img src="/images/casosdeexito/<%= casosdeexito[0].imagenesCasosDeExito[i].imagen %>" alt="" class="imagenCasoDeExito">
+                    <div class="form-group">
+                      <label for="cambiarImagen">Cambiar Imagen:</label>
+                      <input type="file" class="form-control-file" id="cambiarImagen" name="imagenNuevaBlog">
+                      <small id="emailHelp" class="form-text text-muted">Recomendaciones: </small>
+                      <small id="emailHelp" class="form-text text-muted">- Todas las imágenes de los Casos de Éxitos deberán presentar el mismo tamaño, para preservar las proporciones y estética de la página. </small>
+                      <small id="emailHelp" class="form-text text-muted">- Tamaños recomendados Ancho x Alto </small>
+                      <small id="emailHelp" class="form-text text-muted">- Resolución de la imagen. </small>
+                      <small id="emailHelp" class="form-text text-muted">- Tamaño máximo de la imagen. </small>
+          
+                    </div>
+    
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Cambiar Imagen</button>
+
+              <a  class="btn btn-danger" href="/admin/casosdeexito/eliminar/imagen/<%= casosdeexito[0].imagenesCasosDeExito[i].id %>">Eliminar</a>
+
+              <br>
+
+            </form>
+
+          <% }else{ %>
+
+            <form class="formularioCasosDeExito" method="POST" action="/admin/casosdeexito/<%= casosdeexito[0].id %>/agregar/imagen" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="descripcion">Imagen <%= i+1 %></label>
+                <div class="container-ImagenCasoDeExito">
+                  <div class="form-group">
+                    <label for="cambiarImagen">Seleccionar Imagen:</label>
+                    <input type="file" class="form-control-file" id="cambiarImagen" name="imagenNuevaBlog">
+                    <small id="emailHelp" class="form-text text-muted">Recomendaciones: </small>
+                    <small id="emailHelp" class="form-text text-muted">- Todas las imágenes de los Casos de Éxitos deberán presentar el mismo tamaño, para preservar las proporciones y estética de la página. </small>
+                    <small id="emailHelp" class="form-text text-muted">- Tamaños recomendados Ancho x Alto </small>
+                    <small id="emailHelp" class="form-text text-muted">- Resolución de la imagen. </small>
+                    <small id="emailHelp" class="form-text text-muted">- Tamaño máximo de la imagen. </small>
+        
+                  </div>
+    
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Agregar Imagen</button>
+              <br>
+
+            </form>
+
+
+
+          <% } %>
+
+
+        <% } %>
+
+
+      </div>
+    </div>
+
+</body>
+
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>

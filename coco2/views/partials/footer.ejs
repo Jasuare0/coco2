@@ -1,0 +1,56 @@
+
+    
+    <div class="external-container-section container-footer">
+        <div class="internal-container-section">
+          <% if(redessociales[0].direccionhtml != '' || redessociales[1].direccionhtml != '' || redessociales[2].direccionhtml != '' || redessociales[3].direccionhtml != '') { %>
+            <h2 class="header-section header-redes-sociales">SÍGUENOS EN NUESTRAS REDES</h2>
+
+          <% } %>
+          <div class="container-redes-sociales">
+
+            <% if(redessociales[0].direccionhtml != '') {%>
+              <a href="<%= redessociales[0].direccionhtml %>" class="iconos"><i class="fab fa-facebook icons-rrss"></i></a> 
+
+            <% }else {%>
+          
+            <% } %>
+    
+            <% if(redessociales[3].direccionhtml != '') {%>
+              <a href="<%= redessociales[3].direccionhtml %>" class="iconos"><i class="fab fa-twitter icons-rrss"></i></a>
+            <% }else {%>
+          
+            <% } %>
+            
+            <% if(redessociales[1].direccionhtml != '') {%>
+              <a href="<%= redessociales[1].direccionhtml %>" class="iconos"><i class="fab fa-instagram icons-rrss"></i></a>
+            <% }else {%>
+          
+            <% } %>
+            
+            <% if(redessociales[2].direccionhtml != '') {%>
+            
+                <a href="<%= redessociales[2].direccionhtml %>" class="iconos"><i class="fab fa-youtube icons-rrss"></i></a>
+            <% }else {%>
+          
+            <% } %>
+                  
+          </div>
+        </div>
+  
+      </div>
+  
+  
+      <!-- INICIO ÍCONO WHATSAPP -->
+  
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=<%= redessociales[5].direccionhtml %>&text=Hola!%20Me%20contacto%20por%20" class="icono-whatsapp"><i class="fab fa-whatsapp icon-whatsapp"></i></a>
+  
+      <!-- FIN ÍCONO WHATSAPP -->
+  
+      <footer class="container-trademark" style="background-color: white;">
+  
+        <div class="container-copyright">
+          <h2 class="header-copyright">Copyright ©  - 2020 - INNÓVATE S.A.S & <small>Javier Suárez</small></h2>
+  
+        </div>
+  
+      </footer>

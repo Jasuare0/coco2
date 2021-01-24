@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>E-mprender</title> -->
+
+    <%- include('./partials/title') %>
+
+
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- ESTILOS PERSONALES -->
+
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+
+    <link rel='stylesheet' href='/stylesheets/adminFuentesColores.css' />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <% for(let ifuente = 0; ifuente <= fuentes.length-1; ifuente ++) { %>
+        <link href="<%= fuentes[ifuente].link %>" rel="stylesheet">
+
+    <% } %>
+
+
+</head>
+<body onload="mostrarFuentesColores()">
+        
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+        <%- include('./partials/navbar') %>
+
+        <!-- FIN BARRA DE NAVEGACIÓN -->
+    
+    
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+            <li class="breadcrumb-item active">Fuentes y Colores</li>
+          </ol>
+        </nav>
+    
+    
+        <div class="external-container-section">
+
+            <div class="internal-container-section">
+      
+              <form class="container-form" action="/admin/fuentescolores/coloresbarranavegacion" method="POST">
+              
+                <div class="form-group">
+                  <label for="">Color Fondo Barra de Navegación</label>
+
+                    </br>
+                    <label for="">Rojo</label>
+                    <select name="rojoBarraNavegacion" id="rojoBarraNavegacion" onchange="cambioDeFuentesColoresBarraNavegacion()" >
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[10].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                          <% } %>
+        
+                    </select>
+
+                    <label for="">Verde</label>
+                    <select name="verdeBarraNavegacion" id="verdeBarraNavegacion" onchange="cambioDeFuentesColoresBarraNavegacion()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[11].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                          <% } %>
+        
+                    </select>
+
+                    <label for="">Azul</label>
+                    <select name="azulBarraNavegacion" id="azulBarraNavegacion" onchange="cambioDeFuentesColoresBarraNavegacion()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[12].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                          <% } %>
+        
+                    </select>
+
+                    <label for="">Alfa</label>
+                    <select name="alfaBarraNavegacion" id="alfaBarraNavegacion" onchange="cambioDeFuentesColoresBarraNavegacion()">
+                        <% for (let color = 0; color<=10; color ++){ %>
+
+                            <% if(color == resultados[13].value) { %>
+                                <option value="<%= color/10 %>" selected><%= color/10 %></option>
+                            <% }else{ %>
+                                <option value="<%= color/10 %>"><%= color/10 %></option>                            
+                            <% } %>
+
+                        <% } %>
+        
+                    </select>
+                    <div id="container-muestra-color-barra-navegacion">
+                    </div>
+            
+            
+                </div>
+      
+                <button type="submit" class="btn btn-primary">Actualizar Color</button>
+              </form>
+          
+          
+            </div>
+      
+        </div>
+      
+
+
+        
+        <div class="external-container-section">
+
+            <div class="internal-container-section">
+      
+              <form class="container-form" action="/admin/fuentescolores/coloresBody" method="POST">
+              
+                <div class="form-group">
+                  <label for="">Color Fondo Cuerpo Página</label>
+
+                    </br>
+                    <label for="">Rojo</label>
+                    <select name="rojoCuerpo" id="rojoCuerpo" onchange="cambioDeFuentesColoresCuerpo()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[14].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+        
+                    </select>
+
+                    <label for="">Verde</label>
+                    <select name="verdeCuerpo" id="verdeCuerpo" onchange="cambioDeFuentesColoresCuerpo()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[15].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+        
+                    </select>
+
+                    <label for="">Azul</label>
+                    <select name="azulCuerpo" id="azulCuerpo" onchange="cambioDeFuentesColoresCuerpo()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[16].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+        
+                    </select>
+
+                    <label for="">Alfa</label>
+                    <select name="alfaCuerpo" id="alfaCuerpo" onchange="cambioDeFuentesColoresCuerpo()">
+                        <% for (let color = 0; color<=10; color ++){ %>
+
+                            <% if(color == resultados[17].value) { %>
+                                <option value="<%= color/10 %>" selected><%= color/10 %></option>
+                            <% }else{ %>
+                                <option value="<%= color/10 %>"><%= color/10 %></option>                            
+                            <% } %>
+
+                        <% } %>
+        
+                    </select>
+
+                    <div id="container-muestra-color-body">
+                    </div>
+
+
+                </div>
+      
+                <button type="submit" class="btn btn-primary">Actualizar Color</button>
+              </form>
+          
+          
+            </div>
+      
+        </div>
+      
+
+
+        <!-- SELECCIÓN DEL TIPO DE FUENTE -->
+
+                
+        <div class="external-container-section">
+
+            <div class="internal-container-section">
+
+            <form class="container-form" action="/admin/fuentescolores/fuente" method="POST">
+            
+                <div class="form-group">
+                    <label for="">Fuente (Tipo de Letra)</label>
+
+                    </br>
+                    <select name="tipoFuente" id="tipoFuente" onchange="cambioTipoDeFuente()">
+                        <% for (let tipoFuente = 0; tipoFuente<=fuentes.length-1; tipoFuente ++){ %>
+
+
+                            <% if(fuentes[tipoFuente].css != fuenteSeleccionada[0].css){ %>
+                            
+                                <option value="<%= fuentes[tipoFuente].css %>"><%= fuentes[tipoFuente].fuente %></option>                            
+                                
+                            <% }else{ %>
+                                <option value="<%= fuentes[tipoFuente].css %>" selected ><%= fuentes[tipoFuente].fuente %></option>                            
+
+                            <% } %>
+
+                        <% } %>
+
+                    </select>
+
+                    <h1  style="<%= fuenteSeleccionada[0].css %>" id="tituloPrueba">Título</h1>
+                    <p  style="<%= fuenteSeleccionada[0].css %>" id="parrafoPrueba">dolorem ipsum, quia dolor sit amet consectetur adip.</p> 
+
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Actualizar Fuente</button>
+            </form>
+        
+        
+            </div>
+
+        </div>
+
+
+
+
+
+        <script>
+
+            function mostrarFuentesColores(){
+                document.getElementById("container-muestra-color-barra-navegacion").style.backgroundColor = "rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>,<%= resultados[13].value %>)";
+                document.getElementById("container-muestra-color-body").style.backgroundColor = "rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>,<%= resultados[17].value %>)";
+
+            }
+
+            function cambioDeFuentesColoresBarraNavegacion(){
+
+                let rojo = document.getElementById("rojoBarraNavegacion").value;
+                let verde = document.getElementById("verdeBarraNavegacion").value;
+                let azul = document.getElementById("azulBarraNavegacion").value;
+                let opacidad = document.getElementById("alfaBarraNavegacion").value;
+                
+                let colorRGBA = 'rgba(' + rojo + ',' + verde +',' + azul + ',' + opacidad + ')';
+
+                document.getElementById("container-muestra-color-barra-navegacion").style.backgroundColor = colorRGBA;
+
+            }
+
+            function cambioDeFuentesColoresCuerpo(){
+
+                let rojo = document.getElementById("rojoCuerpo").value;
+                let verde = document.getElementById("verdeCuerpo").value;
+                let azul = document.getElementById("azulCuerpo").value;
+                let opacidad = document.getElementById("alfaCuerpo").value;
+
+                let colorRGBA = 'rgba(' + rojo + ',' + verde +',' + azul + ',' + opacidad + ')';
+
+                document.getElementById("container-muestra-color-body").style.backgroundColor = colorRGBA;
+
+            }
+
+            function cambioTipoDeFuente(){
+
+                let longitudFuenteFamilia = document.getElementById("tipoFuente").value.length;
+                let fuenteFamilia = document.getElementById("tipoFuente").value.substr(13,longitudFuenteFamilia-1-13);
+
+                document.getElementById("tituloPrueba").style.fontFamily = fuenteFamilia
+                document.getElementById("parrafoPrueba").style.fontFamily = fuenteFamilia
+
+            }
+
+        </script>
+
+
+</body>
+</html>

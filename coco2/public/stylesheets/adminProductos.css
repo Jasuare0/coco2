@@ -1,0 +1,179 @@
+.external-container-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 30px;
+
+}
+
+.internal-container-section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+.container-producto-mobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid grey;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.container-form-productos{
+    width: 100%;
+}
+
+.imagenProducto{
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+}
+
+th{
+    text-align: center;
+}
+
+.thId{
+    width: 5%;
+}
+
+.thImagen{
+    width: 10%;
+}
+
+.thNombre{
+    width: 15%;
+
+}
+
+.tdNombre{
+    text-align: center;
+}
+
+.thDescripcion{
+    width: 30%;
+}
+
+.thEditar{
+    width: 5%;
+}
+.thEliminar{
+    width: 5%;
+}
+
+.thPrecio{
+    width: 5%;
+
+}
+
+.thPrecioDescuento{
+    width: 5%;
+
+}
+
+.tdDescripcion{
+    text-align: justify;
+}
+
+.tdPrecio{
+    text-align:center;
+}
+
+.tdPrecioDescuento{
+    text-align:center;
+
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.linkEditar{
+    color: white;
+}
+
+.linkEditar:hover{
+    color: rgb(216, 220, 252);
+}
+
+.paragraphdescripcion{
+    text-align: justify;
+}
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+    .contenedortabla{
+        display: none;
+    }
+    .contenedormobile{
+        display: inherit;
+    }
+}
+
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+    .contenedortabla{
+        display: none;
+    }
+    .contenedormobile{
+        display: inherit;
+    }
+}
+
+@media only screen and (min-width: 665px) {
+    .contenedortabla{
+        display: inherit;
+    }
+    .contenedormobile{
+        display: none;
+    }
+}
+
+/* LANDSCAPE TABLETS */
+
+@media only screen and (min-width: 768px) {
+    .contenedortabla{
+        display: inherit;
+    }
+    .contenedormobile{
+        display: none;
+    }
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .contenedortabla{
+        display: inherit;
+    }
+    .contenedormobile{
+        display: none;
+    }
+}
+
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .contenedortabla{
+        display: inherit;
+    }
+    .contenedormobile{
+        display: none;
+    }
+}
