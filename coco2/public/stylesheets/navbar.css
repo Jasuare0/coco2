@@ -1,3 +1,51 @@
+
+.listaCategoriasProductos{
+    display: none;
+}
+
+.categoriasProductos:hover {
+    background-color: rgba(173, 122, 122, 0.6);
+}
+
+.categoriasProductos:hover .listaCategoriasProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content:flex-start;
+    justify-items: center;
+    /* border: 1px solid red; */
+    position: absolute;
+    /* left: 10px; */
+    z-index: 100;
+    background-color: black;
+    width: 60vw;
+}
+
+.liListaCategoriasProductos  {
+
+    list-style: none;
+    width: 33.3%;
+    /* border: 1px solid yellow; */
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.liListaCategoriasProductos:hover {
+    background-color: grey;
+
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+
+}
+
 .nav-link {
     color: white;
 }
