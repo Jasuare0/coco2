@@ -23,6 +23,9 @@ module.exports = (sequelize, Types) =>{
         preciocondescuento: {
             type: Types.STRING,
         },
+        categoria_id: {
+            type: Types.INTEGER,
+        }
 
     },
     {
@@ -41,6 +44,12 @@ module.exports = (sequelize, Types) =>{
         })
     }
 
+    Productos.associate = function (models) {
+        Productos.belongsTo(models.Categorias,{
+            as: "categoriaProducto",
+            foreignKey: "categoria_id"
+        })
+    }
 
     return Productos;
 }

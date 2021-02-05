@@ -4,38 +4,43 @@ const categoriaController = {
 
     'categoria': function(req,res){
 
-        db.Inicio.findAll()
-        .then(resultados=>{
-            db.RedesSociales.findAll()
-            .then(redessociales => {
-                db.Fuentes.findAll({
-                    where: {
-                        status: 'Selected',
-                    }
-                })
-                .then(fuentes => {
-                    db.Productos.findAll()
-                    .then(existenProductos => {
-
-                        db.Servicios.findAll()
-                        .then(existenServicios => {
-                            let usuarioLogueado = req.session.usuario;
-
-                            if(usuarioLogueado == undefined){
+        db.Categoria.findOne()
+        .then(categoria => {
+            db.Inicio.findAll()
+            .then(resultados=>{
+                db.RedesSociales.findAll()
+                .then(redessociales => {
+                    db.Fuentes.findAll({
+                        where: {
+                            status: 'Selected',
+                        }
+                    })
+                    .then(fuentes => {
+                        db.Productos.findAll()
+                        .then(existenProductos => {
+    
+                            db.Servicios.findAll()
+                            .then(existenServicios => {
+                                let usuarioLogueado = req.session.usuario;
+    
+                                if(usuarioLogueado == undefined){
+                    
+                                    usuarioLogueado = ''
+                    
+                                }
                 
-                                usuarioLogueado = ''
-                
-                            }
+                                res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos});
+                   
             
-                            res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos});
-               
-        
+                            })
+    
                         })
-
                     })
                 })
             })
+    
         })
+
 
     }
 }
