@@ -11,7 +11,7 @@ module.exports = (sequelize, Types) =>{
 
     },
     {
-        tableName: "fuentes",
+        tableName: "categorias",
         underscored: true,
         timestamps: true,
         createdAt: 'created_at',

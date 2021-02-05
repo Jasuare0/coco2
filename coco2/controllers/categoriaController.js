@@ -3,44 +3,58 @@ let db = require('../database/models');
 const categoriaController = {
 
     'categoria': function(req,res){
-
-        db.Categoria.findOne()
+        
+        db.Categorias.findByPk(req.params.id)
         .then(categoria => {
-            db.Inicio.findAll()
-            .then(resultados=>{
-                db.RedesSociales.findAll()
-                .then(redessociales => {
-                    db.Fuentes.findAll({
-                        where: {
-                            status: 'Selected',
-                        }
-                    })
-                    .then(fuentes => {
-                        db.Productos.findAll()
-                        .then(existenProductos => {
-    
-                            db.Servicios.findAll()
-                            .then(existenServicios => {
-                                let usuarioLogueado = req.session.usuario;
-    
-                                if(usuarioLogueado == undefined){
+
+            if(categoria.categoria != 0 ||  categoria.categoria != '' || categoria.categoria != null) {
+                console.log('Resultado Categoria:')
+                console.log(categoria.categoria)
+
+
+                db.Inicio.findAll()
+                .then(resultados=>{
+                    db.RedesSociales.findAll()
+                    .then(redessociales => {
+                        db.Fuentes.findAll({
+                            where: {
+                                status: 'Selected',
+                            }
+                        })
+                        .then(fuentes => {
+                            db.Productos.findAll()
+                            .then(existenProductos => {
+        
+                                db.Servicios.findAll()
+                                .then(existenServicios => {
+                                    let usuarioLogueado = req.session.usuario;
+        
+                                    if(usuarioLogueado == undefined){
+                        
+                                        usuarioLogueado = ''
+                        
+                                    }
                     
-                                    usuarioLogueado = ''
-                    
-                                }
+                                    res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria});
                 
-                                res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos});
-                   
-            
+                                })
+        
                             })
-    
                         })
                     })
                 })
-            })
     
-        })
 
+
+            }
+
+    
+
+        })
+        .catch(function(e) {
+            console.log(e); // "oh, no!"
+            res.redirect('/');
+        })
 
     }
 }
