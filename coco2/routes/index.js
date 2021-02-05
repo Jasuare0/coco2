@@ -3,6 +3,7 @@ var router = express.Router();
 var indexController = require('../controllers/indexController');
 var mailController = require('../controllers/mailController');
 var casosdeexitoController = require('../controllers/casosdeexitoController');
+var categoriaController = require('../controllers/categoriaController');
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -11,6 +12,7 @@ router.get('/productos', indexController.productos);
 router.get('/productos/:id', indexController.detalleProducto);
 router.get('/servicios', indexController.servicios);
 router.get('/servicios/:id', indexController.detalleServicio);
+router.get('/categoria', categoriaController.categoria);
 
 // router.get('/blogs', indexController.blog);
 // router.get('/blogs/:id', indexController.blogDetalle);

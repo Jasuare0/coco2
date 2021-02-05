@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- <title>E-mprender</title> -->
+    
+    <%- include('./partials/title') %>
+
+    <!-- ESTILOS BOOSTRAP -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ESTILOS PERSONALES -->
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' href='/stylesheets/categoria.css' />
+
+
+    <!-- FUENTES -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="<%= fuentes[0].link %>" rel="stylesheet">
+
+    
+  </head>
+
+  <body style="background-color: rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>, <%= resultados[17].value %>);<%= fuentes[0].css %>">
+
+
+    <!-- INICIO BARRA DE NAVEGACIÓN -->
+
+    <%- include('./partials/navbar') %>
+
+    <!-- FIN BARRA DE NAVEGACIÓN -->
+
+<div class="contenedorTituloCategoria">
+  <h2>CATEGORIA 1</h2>
+</div>
+
+<div class="contenedorExternoLadoIzqDer">
+  <div class="contenedorLadoIzquierdo">
+
+    <div class="containerExternoFormularios">
+      <div class="containerInternoFormularios">
+        <form class="formularioCategoria">
+          <p>Ver Categoria:</p>
+            
+            <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
+            <label for="contactChoice1">Categoria 2</label></br>
+        
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">Categoria 3</label></br>
+        
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <label for="contactChoice3">Categoria 4</label></br>
+           
+            <button type="submit">Filtrar</button>
+  
+        </form>
+      
+      </div>
+    </div>
+    
+    
+    
+    <div class="containerExternoFormularios">
+      <div class="containerInternoFormularios">
+        <form class="formularioCategoria">
+          <p>Ver Subcategoria:</p>
+           
+            <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
+            <label for="contactChoice1">SubCategoria 1</label></br>
+        
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">SubCategoria 2</label></br>
+        
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <label for="contactChoice3">SubCategoria 3</label></br>
+           
+            <button type="submit">Filtrar</button>
+  
+        </form>
+      
+      </div>
+    </div>
+    
+  
+  
+    <div class="containerExternoFormularios">
+      <div class="containerInternoFormularios">
+        <form class="formularioCategoria">
+          <p>Ver Marca:</p>
+            
+            <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
+            <label for="contactChoice1">Marca 1</label></br>
+        
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">Marca 2</label></br>
+        
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <label for="contactChoice3">Marca 3</label></br>
+           
+            <button type="submit">Filtrar</button>
+  
+        </form>
+      
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  
+  
+  <div class="contenedorLadoDerecho">
+    <div class="card" style="width: 18rem;">
+      <img src="/images/productos/TODOCOSTO-1606366618515.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Adaptador Magentico Inoxidable</h5>
+        <p class="card-text">Adaptador Magentico Inoxidable Marca MOTA.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Marca: </strong> MOTA</li>
+        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
+      </ul>
+
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/images/productos/FUNDACIONES-1606364037139.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Adaptador Multiple de 3/8"</h5>
+        <p class="card-text">Adaptador Multiple de 3/8" Marca ABRASOL.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Marca: </strong> ABRASOL</li>
+        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
+      </ul>
+
+
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img src="/images/productos/MAMPOSTERIA-1606366461956.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Adaptador Magentico Inoxidable</h5>
+        <p class="card-text">Adaptador Magentico Inoxidable Marca MOTA.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Marca: </strong> Cras justo odio</li>
+        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
+      </ul>
+
+
+    </div>
+
+  </div>
+  </div>
+ 
+
+  
+  
+</div>
+
+    <!-- INICIO FOOTER -->
+
+    <%- include('./partials/footer') %>
+
+    <!-- FIN FOOTER -->
+
+  </body>
+
+  <!-- ESTILOS BOOSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- iconos gratuitos -->
+  <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+
+</html>
