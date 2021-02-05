@@ -61,6 +61,9 @@
               <a class="nav-link" href="/contactenos">Contáctenos</a>
             </li>
           </ul>
+
+
+
           <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
@@ -69,6 +72,20 @@
 
           <!-- ÍCONO BASE DE DATOS. En caso de estar logueado el usuario administrador
           le permite consultar y editar la base de datos. -->
+
+          <div>
+            
+            <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." >
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+            </datalist>
+
+          </div>
 
           <% if(usuarioLogueado != ''){ %>
             <div class="container-link-usuario">
@@ -100,3 +117,4 @@
       </nav>
   
       <!-- FIN BARRA DE NAVEGACIÓN -->
+
