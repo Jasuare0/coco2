@@ -39,24 +39,20 @@
   <h2><%= categoria.categoria %></h2>
 </div>
 
+
+
 <div class="contenedorExternoLadoIzqDer">
   <div class="contenedorLadoIzquierdo">
 
     <div class="containerExternoFormularios">
       <div class="containerInternoFormularios">
-        <form class="formularioCategoria">
-          <p>Ver Categoria:</p>
+
+          <p><strong>Ver Categoria:</strong></p>
             
             <% for(let j=0; j<categorias.length; ++j){ %>
-            
-              <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
-              <label for="contactChoice1"><%= categorias[j].categoria %></label></br>
+              <a href="/categoria/<%= categorias[j].id %>" class="linkFiltroCategorias"><%= categorias[j].categoria %></a>
                      
-              <% } %>
-
-              <button type="submit">Filtrar</button>
-  
-        </form>
+            <% } %>
       
       </div>
     </div>
@@ -118,8 +114,8 @@
       <div class="card" style="width: 18rem;">
         <img src="/images/productos/TODOCOSTO-1606366618515.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title"><%= productosCategoria[0].nombre %></h5>
-          <p class="card-text"><%= productosCategoria[0].descripcion %></p>
+          <h5 class="card-title"><%= productosCategoria[i].nombre %></h5>
+          <p class="card-text"><%= productosCategoria[i].descripcion %></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><strong>Marca: </strong> MOTA</li>
