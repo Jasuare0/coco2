@@ -65,9 +65,17 @@
 
 }
 
+.linkFiltroCategorias:hover {
+    width: 100%;
+}
 
 .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
     color: black;
 
 }
 
+.linkFiltroCategorias:hover {
+    background: rgb(48, 49, 73);
+    color: white;
+
+}
