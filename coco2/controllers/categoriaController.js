@@ -8,9 +8,6 @@ const categoriaController = {
         .then(categoria => {
 
             if(categoria.categoria != 0 ||  categoria.categoria != '' || categoria.categoria != null) {
-                console.log('Resultado Categoria:')
-                console.log(categoria.categoria)
-
 
                 db.Inicio.findAll()
                 .then(resultados=>{
@@ -34,8 +31,22 @@ const categoriaController = {
                                         usuarioLogueado = ''
                         
                                     }
-                    
-                                    res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria});
+                                    
+                                    db.Productos.findAll({
+                                        where: {
+                                            categoria_id: req.params.id,
+                                        }
+                                    })
+                                    .then(productosCategoria => {
+
+                                        db.Categorias.findAll()
+                                        .then(categorias => {
+                                            res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias});
+
+                                        })
+
+                                    })
+
                 
                                 })
         

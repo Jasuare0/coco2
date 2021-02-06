@@ -47,16 +47,14 @@
         <form class="formularioCategoria">
           <p>Ver Categoria:</p>
             
-            <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
-            <label for="contactChoice1">Categoria 2</label></br>
-        
-            <input type="radio" id="contactChoice2" name="contact" value="phone">
-            <label for="contactChoice2">Categoria 3</label></br>
-        
-            <input type="radio" id="contactChoice3" name="contact" value="mail">
-            <label for="contactChoice3">Categoria 4</label></br>
-           
-            <button type="submit">Filtrar</button>
+            <% for(let j=0; j<categorias.length; ++j){ %>
+            
+              <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
+              <label for="contactChoice1"><%= categorias[j].categoria %></label></br>
+                     
+              <% } %>
+
+              <button type="submit">Filtrar</button>
   
         </form>
       
@@ -115,47 +113,23 @@
   
   
   <div class="contenedorLadoDerecho">
-    <div class="card" style="width: 18rem;">
-      <img src="/images/productos/TODOCOSTO-1606366618515.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Adaptador Magentico Inoxidable</h5>
-        <p class="card-text">Adaptador Magentico Inoxidable Marca MOTA.</p>
+
+    <% for(let i=0; i<productosCategoria.length; ++i) {%>
+      <div class="card" style="width: 18rem;">
+        <img src="/images/productos/TODOCOSTO-1606366618515.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= productosCategoria[0].nombre %></h5>
+          <p class="card-text"><%= productosCategoria[0].descripcion %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Marca: </strong> MOTA</li>
+          <li class="list-group-item"><strong>Categoria: </strong> <%= categoria.categoria %></li>
+        </ul>
+  
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Marca: </strong> MOTA</li>
-        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
-      </ul>
+      
+    <% } %>
 
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="/images/productos/FUNDACIONES-1606364037139.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Adaptador Multiple de 3/8"</h5>
-        <p class="card-text">Adaptador Multiple de 3/8" Marca ABRASOL.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Marca: </strong> ABRASOL</li>
-        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
-      </ul>
-
-
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-      <img src="/images/productos/MAMPOSTERIA-1606366461956.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Adaptador Magentico Inoxidable</h5>
-        <p class="card-text">Adaptador Magentico Inoxidable Marca MOTA.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Marca: </strong> Cras justo odio</li>
-        <li class="list-group-item"><strong>Categoria: </strong> Ferretería / Adaptadores</li>
-      </ul>
-
-
-    </div>
 
   </div>
   </div>
