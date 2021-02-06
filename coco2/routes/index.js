@@ -13,7 +13,6 @@ router.get('/productos/:id', indexController.detalleProducto);
 router.get('/servicios', indexController.servicios);
 router.get('/servicios/:id', indexController.detalleServicio);
 router.get('/categoria/:id', categoriaController.categoria);
-router.get('/categoria', categoriaController.categoria2);
 
 // router.get('/blogs', indexController.blog);
 // router.get('/blogs/:id', indexController.blogDetalle);

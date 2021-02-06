@@ -79,3 +79,18 @@
     color: white;
 
 }
+
+.linkFiltroMarcas{
+    width: 100%;
+}
+
+
+.linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+    color: black;
+
+}
+
+.linkFiltroMarcas:hover {
+    background: rgb(48, 49, 73);
+    color: white;
+}

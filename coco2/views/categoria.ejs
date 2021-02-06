@@ -84,22 +84,13 @@
   
     <div class="containerExternoFormularios">
       <div class="containerInternoFormularios">
-        <form class="formularioCategoria">
-          <p>Filtrar por Marca:</p>
+          <p><strong>Filtrar por Marca:</strong></p>
             
-            <input type="radio" id="form-check-input contactChoice1" name="contact" value="email">
-            <label for="contactChoice1">Marca 1</label></br>
-        
-            <input type="radio" id="contactChoice2" name="contact" value="phone">
-            <label for="contactChoice2">Marca 2</label></br>
-        
-            <input type="radio" id="contactChoice3" name="contact" value="mail">
-            <label for="contactChoice3">Marca 3</label></br>
-           
-            <button type="submit">Filtrar</button>
-  
-        </form>
-      
+          <% for(let n=0; n<todasMarcasProductos.length; ++n){ %>
+            <a href="/categoria/<%= categorias[n].id %>" class="linkFiltroCategorias"><%= todasMarcasProductos[n].marcaProducto.marca %></a>
+                   
+          <% } %>
+
       </div>
     </div>
   
@@ -118,7 +109,7 @@
           <p class="card-text"><%= productosCategoria[i].descripcion %></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><strong>Marca: </strong> MOTA</li>
+          <li class="list-group-item"><strong>Marca: </strong><%= productoConMarca[i].marcaProducto.marca %></li>
           <li class="list-group-item"><strong>Categoria: </strong> <%= categoria.categoria %></li>
         </ul>
   

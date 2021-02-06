@@ -25,6 +25,9 @@ module.exports = (sequelize, Types) =>{
         },
         categoria_id: {
             type: Types.INTEGER,
+        },
+        marca_id: {
+            type: Types.INTEGER,
         }
 
     },
@@ -45,6 +48,10 @@ module.exports = (sequelize, Types) =>{
         Productos.belongsTo(models.Categorias,{
             as: "categoriaProducto",
             foreignKey: "categoria_id"
+        }),
+        Productos.belongsTo(models.Marcas,{
+            as: "marcaProducto",
+            foreignKey: "marca_id"
         })
     }
 
