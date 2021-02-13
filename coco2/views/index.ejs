@@ -88,19 +88,38 @@
                   <%= productos[i].descripcion %>
                 </p>
   
-                <% if(productos[i].precio != '') { %>
+  
+
+                <% if(productos[i].precio != '') {  %>
                   <p class="paragraph-productos">
-                    <s>Precio: $ <%= productos[i].precio %></s>
+                    <% if(productos[i].preciocondescuento != ''){%>
+                    
+                      <b>Precio: $ <del><%= productos[i].precio %></del></b>
+                    
+                    <% }else{ %>
+                      <b>Promoción: <%= productos[i].precio %></b>
+
+                    <% } %>
+
                   </p>
-                <% }else{ %>
+                <% }else{  %>
                   <!-- <p class="paragraph-productos">
                     <br>
                   </p> -->
                 <% } %>
-  
+
+
                 <% if(productos[i].precio != '') {  %>
                   <p class="paragraph-productos">
-                    <b>Promoción: $ <%= productos[i].preciocondescuento %></b>
+                    <% if(productos[i].preciocondescuento != ''){%>
+                    
+                      <b>Promoción: $ <%= productos[i].preciocondescuento %></b>
+                    
+                    <% }else{ %>
+                      <b>Promoción: N/A</b>
+
+                    <% } %>
+
                   </p>
                 <% }else{  %>
                   <!-- <p class="paragraph-productos">
@@ -156,19 +175,36 @@
                   <%= servicios[i].descripcion %>
                 </p>
   
-                <% if(servicios[i].precio != '') { %>
+                <% if(servicios[i].precio != '') {  %>
                   <p class="paragraph-productos">
-                    <s>Precio: $ <%= servicios[i].precio %></s>
+                    <% if(servicios[i].preciocondescuento != ''){%>
+                    
+                      <b>Precio: $ <del><%= servicios[i].precio %></del></b>
+                    
+                    <% }else{ %>
+                      <b>Promoción: <%= servicios[i].precio %></b>
+
+                    <% } %>
+
                   </p>
-                <% }else{ %>
+                <% }else{  %>
                   <!-- <p class="paragraph-productos">
                     <br>
                   </p> -->
                 <% } %>
-  
-                <% if(servicios[i].precio != '' || servicios[i].precio.length != 0 ) {  %>
+
+
+                <% if(servicios[i].precio != '') {  %>
                   <p class="paragraph-productos">
-                    <b>Promoción: $ <%= servicios[i].preciocondescuento %></b>
+                    <% if(servicios[i].preciocondescuento != ''){%>
+                    
+                      <b>Promoción: $ <%= servicios[i].preciocondescuento %></b>
+                    
+                    <% }else{ %>
+                      <b>Promoción: N/A</b>
+
+                    <% } %>
+
                   </p>
                 <% }else{  %>
                   <!-- <p class="paragraph-productos">
@@ -176,7 +212,7 @@
                   </p> -->
                 <% } %>
   
-                <a href="/productos/<%= servicios[i].id %>">Ver mas ...</a>
+                <a href="/productos/<%= servicios[i].id %>" class="verMas">Ver mas ...</a>
               </div>
   
             <% } %>

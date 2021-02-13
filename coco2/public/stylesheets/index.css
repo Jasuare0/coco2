@@ -5,6 +5,14 @@ body {
  }
 
 
+.verMas{
+    color: black;
+}
+
+.verMas:link, .verMas:visited, .verMas:active {
+    color: black;
+    text-decoration:none;
+}
 
 /* CELLPHONES */
 

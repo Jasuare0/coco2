@@ -111,6 +111,15 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><strong>Marca: </strong><%= productoConMarca[i].marcaProducto.marca %></li>
           <li class="list-group-item"><strong>Categoria: </strong> <%= categoria.categoria %></li>
+          <% if(productosCategoria[i].preciocondescuento != ''){ %>
+            <li class="list-group-item"><strong>Precio: </strong> <del><%= productosCategoria[i].precio %></del></li>
+            <li class="list-group-item"><strong>Promoción: </strong> <%= productosCategoria[i].preciocondescuento %></li>
+            
+          <% }else{ %>
+            <li class="list-group-item"><strong>Precio: </strong><%= productosCategoria[i].precio %></li>
+            <li class="list-group-item"><strong>Promoción: </strong> N/A</li>
+
+          <% }%>
         </ul>
   
       </div>

@@ -65,6 +65,9 @@ const categoriaController = {
                                                     })
                                                 .then(todasMarcasProductos => {
 
+                                                    console.log('Resultado productosCategoria: ')
+                                                    console.log(productosCategoria)
+
                                                     res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos});
 
                                                 })
