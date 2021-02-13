@@ -94,7 +94,19 @@
       </div>
     </div>
   
+    
   
+    <div class="containerExternoFormularios">
+      <div class="containerInternoFormularios">
+          <p><strong>Filtrar por Subcategoria:</strong></p>
+            
+          <% for(let r=0; r<todasSubcategoriasProductos.length; ++r){ %>
+              <a href="/categoria/<%= categoria.id %>/subcategoria/<%= todasSubcategoriasProductos[r].subcategoriaProducto.id %>" class="linkFiltroCategorias"><%= todasSubcategoriasProductos[r].subcategoriaProducto.subcategoria %></a>
+                   
+          <% } %>
+
+      </div>
+    </div>
   
   </div>
   
