@@ -1,96 +1,541 @@
-.contenedorTituloCategoria{
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+    .contenedorTituloCategoria{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
     
+    .contenedorExternoLadoIzqDer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    
+    .contenedorLadoIzquierdo{
+        width: 100%;
+    
+    }
+    
+    .contenedorLadoDerecho{
+        width: 100%;
+        border: 1px solid rgb(214, 211, 211);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items:center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .containerExternoFormularios {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .containerInternoFormularios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        width: 100%;
+    }
+    
+    .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    
+    }
+    
+    .linkFiltroMarcas{
+        width: 100%;
+    }
+    
+    
+    .linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroMarcas:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    }
+
+    .card{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
 }
 
-.contenedorExternoLadoIzqDer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-items: center;
-    align-items:flex-start;
-    align-content: center;
+/* PORTRAITS TABLETS AND LARGE PHONES*/
+@media only screen and (min-width: 426px) {
+
+    .contenedorTituloCategoria{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .contenedorExternoLadoIzqDer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+    
+    }
+    
+    
+    .contenedorLadoIzquierdo{
+        width: 20%;
+    
+    }
+    
+    .contenedorLadoDerecho{
+        width: 75%;
+        border: 1px solid rgb(214, 211, 211);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .containerExternoFormularios {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .containerInternoFormularios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        width: 100%;
+    }
+    
+    .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    
+    }
+    
+    .linkFiltroMarcas{
+        width: 100%;
+    }
+    
+    
+    .linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroMarcas:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    }
+    
+    
+    .card{
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
 
 }
 
+/* LANDSCAPE TABLETS */
 
-.contenedorLadoIzquierdo{
-    width: 10%;
+@media only screen and (min-width: 768px) {
+    .contenedorTituloCategoria{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .contenedorExternoLadoIzqDer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+    
+    }
+    
+    
+    .contenedorLadoIzquierdo{
+        width: 20%;
+    
+    }
+    
+    .contenedorLadoDerecho{
+        width: 75%;
+        border: 1px solid rgb(214, 211, 211);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .containerExternoFormularios {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .containerInternoFormularios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        width: 100%;
+    }
+    
+    .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    
+    }
+    
+    .linkFiltroMarcas{
+        width: 100%;
+    }
+    
+    
+    .linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroMarcas:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    }
+    
+    
+    .card{
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+
+}
+/* LAPTOPS - DESKTOP */
+
+@media only screen and (min-width: 992px) {
+    .contenedorTituloCategoria{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .contenedorExternoLadoIzqDer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+    
+    }
+    
+    
+    .contenedorLadoIzquierdo{
+        width: 20%;
+    
+    }
+    
+    .contenedorLadoDerecho{
+        width: 75%;
+        border: 1px solid rgb(214, 211, 211);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .containerExternoFormularios {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .containerInternoFormularios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        width: 100%;
+    }
+    
+    .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    
+    }
+    
+    .linkFiltroMarcas{
+        width: 100%;
+    }
+    
+    
+    .linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroMarcas:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    }
+    
+    
+    .card{
+        width: 45%;
+        margin-bottom: 20px;
+    }
 
 }
 
-.contenedorLadoDerecho{
-    width: 85%;
-    border: 1px solid rgb(214, 211, 211);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-items: center;
-    align-items:center;
-    align-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+/* EXTRALARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+    .contenedorTituloCategoria{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .contenedorExternoLadoIzqDer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items:flex-start;
+        align-content: center;
+    
+    }
+    
+    
+    .contenedorLadoIzquierdo{
+        width: 20%;
+    
+    }
+    
+    .contenedorLadoDerecho{
+        width: 75%;
+        border: 1px solid rgb(214, 211, 211);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: flex-start;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .containerExternoFormularios {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .containerInternoFormularios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        width: 100%;
+    }
+    
+    .linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroCategorias:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    
+    }
+    
+    .linkFiltroMarcas{
+        width: 100%;
+    }
+    
+    
+    .linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
+        color: black;
+    
+    }
+    
+    .linkFiltroMarcas:hover {
+        background: rgb(48, 49, 73);
+        color: white;
+    }
+    
+    
+    .card{
+        width: 30%;
+        margin-bottom: 20px;
+    }
 
-}
-
-.containerExternoFormularios {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid grey;
-    border-radius: 10px;
-    margin-bottom: 10px;
-
-}
-
-.containerInternoFormularios {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-
-}
-
-.linkFiltroCategorias:hover {
-    width: 100%;
-}
-
-.linkFiltroCategorias:link, .linkFiltroCategorias:visited, .linkFiltroCategorias:active {
-    color: black;
-
-}
-
-.linkFiltroCategorias:hover {
-    background: rgb(48, 49, 73);
-    color: white;
-
-}
-
-.linkFiltroMarcas{
-    width: 100%;
-}
-
-
-.linkFiltroMarcas:link, .linkFiltroMarcas:visited, .linkFiltroMarcas:active {
-    color: black;
-
-}
-
-.linkFiltroMarcas:hover {
-    background: rgb(48, 49, 73);
-    color: white;
+    
 }
