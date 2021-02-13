@@ -76,19 +76,18 @@
               <h2 class="titulo-producto"><%= productos[i].nombre %></h2>
               <p class="paragraph-producto"><%= productos[i].descripcion %></p>
 
-              <% if(productos[i].precio != '') { %>
-                <p class="paragraph-productos">
-                  <s>Precio: $ <%= productos[i].precio %></s>
-                </p>
-              <% }else{ %>
-                <!-- <p class="paragraph-productos">
-                  <br>
-                </p> -->
-              <% } %>
 
               <% if(productos[i].precio != '') {  %>
                 <p class="paragraph-productos">
-                  <b>Promoción: $ <%= productos[i].preciocondescuento %></b>
+                  <% if(productos[i].preciocondescuento != ''){%>
+                  
+                    <b>Precio: $ <del><%= productos[i].precio %></del></b>
+                  
+                  <% }else{ %>
+                    <b>Promoción: <%= productos[i].precio %></b>
+
+                  <% } %>
+
                 </p>
               <% }else{  %>
                 <!-- <p class="paragraph-productos">
@@ -96,6 +95,25 @@
                 </p> -->
               <% } %>
 
+
+              <% if(productos[i].precio != '') {  %>
+                <p class="paragraph-productos">
+                  <% if(productos[i].preciocondescuento != ''){%>
+                  
+                    <b>Promoción: $ <%= productos[i].preciocondescuento %></b>
+                  
+                  <% }else{ %>
+                    <b>Promoción: N/A</b>
+
+                  <% } %>
+
+                </p>
+              <% }else{  %>
+                <!-- <p class="paragraph-productos">
+                  <br>
+                </p> -->
+              <% } %>
+              
               <a href="/productos/<%= productos[i].id %>">Ver más...</a>
             </div>
           </div>

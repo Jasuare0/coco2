@@ -110,7 +110,7 @@
 
 @media only screen and (min-width: 992px) {
     .external-container-productos{
-        width: 70%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -145,7 +145,7 @@
 /* EXTRALARGE DEVICES */
 @media only screen and (min-width: 1200px) {
     .external-container-productos{
-        width: 70%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         align-content: center;
