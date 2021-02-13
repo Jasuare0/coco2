@@ -33,11 +33,11 @@
                 </a>
 
                 <ul class="listaCategoriasProductos"  style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>, <%= resultados[13].value %>);">
-                  <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/1">Categoria 1</a></li>
-                  <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/2">Categoria 2</a></li>
-                  <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/3">Categoria 3</a></li>
-                  <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/4">Categoria 4</a></li>
-                  <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/5">Categoria 5</a></li>
+                  
+                  <% for(let r=0; r<listadoCategorias.length; ++r ){ %>
+                    <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/<%= listadoCategorias[r].id %>"><%= listadoCategorias[r].categoria %></a></li>
+                  
+                    <% } %>
                 </ul>
 
               </li>

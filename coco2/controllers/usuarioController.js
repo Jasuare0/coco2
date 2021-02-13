@@ -20,7 +20,11 @@ const usuarioController = {
             .then(existenProductos => {
                 db.Servicios.findAll()
                 .then(existenServicios => {
-                    res.render('login',{validacionUsuario: '', usuarioLogueado, validacionContrasena: '', mensaje: '',resultados: resultados,existenProductos,existenServicios})
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('login',{validacionUsuario: '', usuarioLogueado, validacionContrasena: '', mensaje: '',resultados: resultados,existenProductos,existenServicios,listadoCategorias})
+                    })
+
 
                 })
 
@@ -89,7 +93,11 @@ const usuarioController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('login',{validacionUsuario: 'notOk', validacionContrasena: '', mensaje: 'El usuario ingresado no existe en la base de datos, favor reingresar los datos:',existenProductos,existenServicios,resultados,usuarioLogueado})                        
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('login',{validacionUsuario: 'notOk', validacionContrasena: '', mensaje: 'El usuario ingresado no existe en la base de datos, favor reingresar los datos:',existenProductos,existenServicios,resultados,usuarioLogueado,listadoCategorias})                        
+                            })
+
     
                         })
                     })

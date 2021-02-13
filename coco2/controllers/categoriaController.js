@@ -77,8 +77,11 @@ const categoriaController = {
                                                         }
                                                     )
                                                     .then(todasSubcategoriasProductos => {
+                                                        db.Categorias.findAll()
+                                                        .then(listadoCategorias => {
+                                                            res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias});
+                                                        })
 
-                                                        res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos});
 
                                                     })
 
@@ -191,8 +194,12 @@ const categoriaController = {
                                                         }
                                                     )
                                                     .then(todasSubcategoriasProductos => {
+                                                        db.Categorias.findAll()
+                                                        .then(listadoCategorias => {
+                                                            res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias});
 
-                                                        res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos});
+                                                        })
+
 
                                                     })
 
@@ -305,8 +312,11 @@ const categoriaController = {
                                                         }
                                                     )
                                                     .then(todasSubcategoriasProductos => {
+                                                        db.Categorias.findAll()
+                                                        .then(listadoCategorias => {
+                                                            res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias});
+                                                        })
 
-                                                        res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos});
 
                                                     })
 

@@ -57,8 +57,12 @@ const indexController = {
                                                 usuarioLogueado = ''
                 
                                             }
-            
-                                            res.render('index',{resultados,clientes,carousel,usuarioLogueado,redessociales, productos,fuentes,servicios,existenServicios,existenProductos});
+                                            
+                                            db.Categorias.findAll()
+                                            .then(listadoCategorias => {
+                                                res.render('index',{resultados,clientes,carousel,usuarioLogueado,redessociales, productos,fuentes,servicios,existenServicios,existenProductos,listadoCategorias});
+
+                                            })
                
         
                                         })
@@ -114,13 +118,12 @@ const indexController = {
                                         usuarioLogueado = ''
                 
                                     }
-                
-                                    res.render('nosotros',{carousel,usuarioLogueado,redessociales,nosotros,resultados,fuentes,existenProductos,existenServicios});
-                    
-            
-    
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+                                        res.render('nosotros',{carousel,usuarioLogueado,redessociales,nosotros,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                    
+                                    })
                                 })
-    
                             })
                         })
                     })
@@ -174,9 +177,12 @@ const indexController = {
                 
                                     }
                 
-                
-                                    res.render('productos',{productos, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios});
-            
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+
+                                        res.render('productos',{productos, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                    
+                                    })
         
                                 })
                             })
@@ -230,8 +236,12 @@ const indexController = {
                 
                                     }
                 
-                                    res.render('DetalleProducto',{usuarioLogueado,producto,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios})
-            
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+                                        res.render('DetalleProducto',{usuarioLogueado,producto,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias})
+                                    
+                                    })
+
         
                                 })                                
                             })
@@ -286,9 +296,13 @@ const indexController = {
                 
                                     }
                 
-            
-                                    res.render('servicios',{servicios, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios});
-                    
+                            
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+                                        res.render('servicios',{servicios, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                    
+                                    })
+
         
                                 })                                
                             })
@@ -341,8 +355,12 @@ const indexController = {
                 
                                     }
                 
-                                    res.render('DetalleServicio',{usuarioLogueado,servicio,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios})
-                    
+                                                                
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+                                        res.render('DetalleServicio',{usuarioLogueado,servicio,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias})
+                                    
+                                    })
         
                                 })                                
                             })
@@ -470,8 +488,11 @@ const indexController = {
             
                                 }
             
-                                res.render('contactenos',{resultados, carousel,usuarioLogueado,redessociales,fuentes,existenProductos,existenServicios});
-                
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('contactenos',{resultados, carousel,usuarioLogueado,redessociales,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                
+                                })
         
                             })                            
                         })

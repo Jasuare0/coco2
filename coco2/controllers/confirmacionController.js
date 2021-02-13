@@ -23,7 +23,11 @@ const confirmacionController = {
         
                 db.Inicio.findAll()
                 .then(resultados => {
-                    res.render('confirmacionAccionBD',{usuarioLogueado,ubicacionPrevia,direccionPrevia,resultados,existenProductos,existenServicios})
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('confirmacionAccionBD',{usuarioLogueado,ubicacionPrevia,direccionPrevia,resultados,existenProductos,existenServicios,listadoCategorias})
+                    })
+                    
         
                 })
         

@@ -33,7 +33,12 @@ const casosdeexitoController = {
                         .then(existenProductos => {
                             db.Servicios.findAll()
                             .then(existenServicios => {
-                                res.render('casosdeexito',{resultados,usuarioLogueado,redessociales,casosdeexito,fuentes,existenProductos,existenServicios});
+                                
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('casosdeexito',{resultados,usuarioLogueado,redessociales,casosdeexito,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                
+                                })
 
                             })
 
@@ -79,7 +84,11 @@ const casosdeexitoController = {
                     db.Servicios.findAll()
                     .then(existenServicios => {
 
-                        res.render('adminCasosDeExito',{resultados,usuarioLogueado,casosdeexito,existenProductos, existenServicios})
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            res.render('adminCasosDeExito',{resultados,usuarioLogueado,casosdeexito,existenProductos, existenServicios,listadoCategorias})
+                        
+                        })
 
                     })
                 })
@@ -147,7 +156,12 @@ const casosdeexitoController = {
             })
             .then(casosdeexito => {
 
-                res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito})
+                
+                db.Categorias.findAll()
+                .then(listadoCategorias => {
+                    res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito,listadoCategorias})
+                })
+
 
             })
 
@@ -287,8 +301,12 @@ const casosdeexitoController = {
 
         db.Inicio.findAll()
         .then(resultados => {
-
-            res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado})
+                
+            db.Categorias.findAll()
+            .then(listadoCategorias => {
+                res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado,listadoCategorias})
+            
+            })
 
         })
 

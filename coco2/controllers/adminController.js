@@ -20,7 +20,12 @@ const adminController = {
                 .then(existenServicios => {
                     db.Inicio.findAll()
                     .then(resultados => {
-                        res.render('admin',{usuarioLogueado, resultados: resultados,existenProductos,existenServicios});
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            res.render('admin',{usuarioLogueado, resultados: resultados,existenProductos,existenServicios,listadoCategorias});
+                        
+                        })
+
                     })
         
         
@@ -84,7 +89,11 @@ const adminController = {
                                     .then(existenProductos => {
                                         db.Servicios.findAll()
                                         .then(existenServicios => {
-                                            res.render('adminInicio',{resultado,clientes,carouseles,usuarioLogueado,redessociales,productos, resultados: resultado,servicios,existenProductos,existenServicios});
+
+                                            db.Categorias.findAll()
+                                            .then(listadoCategorias => {
+                                                res.render('adminInicio',{resultado,clientes,carouseles,usuarioLogueado,redessociales,productos, resultados: resultado,servicios,existenProductos,existenServicios,listadoCategorias});
+                                            })
 
                                         })                                        
                                     })
@@ -308,7 +317,11 @@ const adminController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('adminNosotros',{nosotros,usuarioLogueado,resultados,existenProductos,existenServicios});
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('adminNosotros',{nosotros,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                            })
+
 
                         })
                     })
@@ -470,7 +483,11 @@ const adminController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('adminProductos',{productos,usuarioLogueado,resultados,existenProductos,existenServicios});
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('adminProductos',{productos,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                            })
+
 
                         })
                     })
@@ -517,8 +534,11 @@ const adminController = {
                         .then(existenProductos => {
                             db.Servicios.findAll()
                             .then(existenServicios => {
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('adminEditProducto', {producto,caracteristicas,usuarioLogueado,resultados: resultados,existenProductos,existenServicios,listadoCategorias})
+                                })
 
-                                res.render('adminEditProducto', {producto,caracteristicas,usuarioLogueado,resultados: resultados,existenProductos,existenServicios})
 
                             })
                         })
@@ -595,7 +615,12 @@ const adminController = {
             .then(existenProductos => {
                 db.Servicios.findAll()
                 .then(existenServicios => {
-                    res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios});
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                    
+                    })
+
 
                 })
             })
@@ -781,7 +806,12 @@ const adminController = {
                         .then(existenProductos => {
                             db.Servicios.findAll()
                             .then(existenServicios => {
-                                res.render('adminEditCaracteristicaProducto',{producto,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios})            
+
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('adminEditCaracteristicaProducto',{producto,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})            
+                                })
+
 
                             })
                         })
@@ -892,7 +922,12 @@ const adminController = {
                 .then(existenProductos => {
                     db.Servicios.findAll()
                     .then(existenServicios => {
-                        res.render('adminCrearCaracteristica',{producto,usuarioLogueado,resultados,existenProductos,existenServicios})
+
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            res.render('adminCrearCaracteristica',{producto,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})
+
+                        })
 
                     })
                 })
@@ -994,7 +1029,12 @@ const adminController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('agregarProductoInicio',{usuarioLogueado, productos,resultados,existenProductos,existenServicios})
+
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('agregarProductoInicio',{usuarioLogueado, productos,resultados,existenProductos,existenServicios,listadoCategorias})
+                            })
+
 
                         })
                     })
@@ -1069,6 +1109,7 @@ const adminController = {
                     }
                 })
                 .then(resultado2 => {
+
                     res.redirect('/admin/productos')
                 })
 
@@ -1345,7 +1386,11 @@ const adminController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('adminCarousel',{carousel,usuarioLogueado,resultados,existenProductos,existenServicios})
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('adminCarousel',{carousel,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})
+                            })
+
 
                         })
                     })
@@ -1433,7 +1478,11 @@ const adminController = {
             .then(existenProductos => {
                 db.Servicios.findAll()
                 .then(existenServicios => {
-                    res.render('adminCrearCarousel',{usuarioLogueado,resultados,existenProductos,existenServicios});
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('adminCrearCarousel',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                    })
+
 
                 })
             })
@@ -1572,7 +1621,11 @@ const adminController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('adminClientes',{usuarioLogueado, cliente,resultados,existenProductos,existenServicios});
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('adminClientes',{usuarioLogueado, cliente,resultados,existenProductos,existenServicios,listadoCategorias});
+                            })
+
 
                         })
                     })
@@ -1660,7 +1713,11 @@ const adminController = {
             .then(existenProductos => {
                 db.Servicios.findAll()
                 .then(existenServicios => {
-                    res.render('adminCrearClientes',{usuarioLogueado,resultados,existenProductos,existenServicios})
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('adminCrearClientes',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})
+                    })
+
 
                 })
             })

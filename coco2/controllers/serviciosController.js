@@ -27,7 +27,11 @@ const serviciosController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('adminServicios',{servicios,usuarioLogueado,resultados,existenProductos,existenServicios});
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('adminServicios',{servicios,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                            })
+
 
                         })
                     })
@@ -75,7 +79,11 @@ const serviciosController = {
                         .then(existenProductos => {
                             db.Servicios.findAll()
                             .then(existenServicios => {
-                                res.render('adminEditServicio', {servicio,caracteristicas,usuarioLogueado,resultados: resultados, existenProductos, existenServicios})
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('adminEditServicio', {servicio,caracteristicas,usuarioLogueado,resultados: resultados, existenProductos, existenServicios,listadoCategorias})
+                                })
+
 
                             })
                         })
@@ -152,7 +160,11 @@ const serviciosController = {
             .then(existenProductos => {
                 db.Servicios.findAll()
                 .then(existenServicios => {
-                    res.render('adminCrearServicio',{usuarioLogueado,resultados,existenProductos,existenServicios});
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('adminCrearServicio',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                    })
+
 
                 })
             })
@@ -354,7 +366,11 @@ const serviciosController = {
                         .then(existenProductos => {
                             db.Servicios.findAll()
                             .then(existenServicios => {
-                                res.render('adminEditCaracteristicaServicio',{servicio,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios})            
+                                db.Categorias.findAll()
+                                .then(listadoCategorias => {
+                                    res.render('adminEditCaracteristicaServicio',{servicio,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})            
+                                })
+
 
                             })
                         })
@@ -465,7 +481,11 @@ const serviciosController = {
                 .then(existenProductos => {
                     db.Servicios.findAll()
                     .then(existenServicios => {
-                        res.render('adminCrearCaracteristicaServicio',{servicio,usuarioLogueado,resultados,existenProductos,existenServicios})
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            res.render('adminCrearCaracteristicaServicio',{servicio,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})
+                        })
+
 
                     })
                 })
@@ -567,7 +587,11 @@ const serviciosController = {
                     .then(existenProductos => {
                         db.Servicios.findAll()
                         .then(existenServicios => {
-                            res.render('agregarServicioInicio',{usuarioLogueado, servicios,resultados,existenProductos,existenServicios})
+                            db.Categorias.findAll()
+                            .then(listadoCategorias => {
+                                res.render('agregarServicioInicio',{usuarioLogueado, servicios,resultados,existenProductos,existenServicios,listadoCategorias})
+                            })
+
 
                         })
                     })
