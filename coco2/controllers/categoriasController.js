@@ -164,6 +164,90 @@ const categoriasController = {
 
 
 
+    },
+    'editarSubcategoria': function(req,res){
+
+        let usuarioLogueado = req.session.usuario;
+        
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+
+        if(usuarioLogueado != ''){
+
+            db.Inicio.findAll()
+            .then(resultados => {
+                db.Productos.findAll()
+                .then(existenProductos => {
+                    db.Servicios.findAll()
+                    .then(existenServicios => {
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            db.Subcategorias.findAll(
+                                {
+                                    where: {
+                                        id: req.params.id,
+                                    },
+                                    
+                                    include: [{association: 'categoriaSubcategoria'}]
+                                                                
+                                }    
+                            )
+                            .then(subcategoria => {
+
+                                res.render('adminSubCategoriasEditar',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategoria});
+
+                            })
+
+                        })
+
+
+                    })
+                })
+            })
+
+        }else{
+            res.redirect('/users');
+
+        }
+
+
+
+
+    },
+
+    'actualizarSubCategoria': function(req,res){
+
+
+        console.log('Resultado Subcategoria: ')
+        console.log(req.body.subcategoria)
+
+
+        db.Subcategorias.update(
+            {
+                subcategoria: req.body.subcategoria,
+            },
+            {
+                where:{
+                    id: req.params.id,
+                }     
+            }
+            
+        )
+        .then(subcategoriaActualizada => {
+
+            let ubicacionPrevia = 'Subcategorias';
+            let direccionPrevia = 'categorias/subcategorias';
+
+            res.redirect('/admin/confirmacionaccionbd/?ubicacionprevia='+ ubicacionPrevia +'&direccionprevia=' + direccionPrevia);
+            
+
+        })
+
+
     }
 
 }

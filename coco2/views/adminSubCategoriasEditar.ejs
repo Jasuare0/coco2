@@ -18,7 +18,7 @@
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel='stylesheet' href='/stylesheets/navbar.css' />
 
-    <link rel='stylesheet' href='/stylesheets/adminProductos.css' />
+    <link rel='stylesheet' href='/stylesheets/adminNosotros.css' />
 
 </head>
 <body>
@@ -35,47 +35,31 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Inicio</a></li>
         <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Subcategorias</li>
+        <li class="breadcrumb-item"><a href="/admin/categorias/subcategorias">Subcategorias</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Crear</li>
       </ol>
     </nav>
 
 
-    <div class="external-container-section contenedortabla">
+
+    <div class="external-container-section">
 
       <div class="internal-container-section">
+        <form class="container-form-nosotros" action="/admin/categorias/subcategorias/editar/<%= subcategoria[0].id %>" method="POST">
 
-        <button type="button" class="btn btn-primary"><a href="" class="linkEditar"> + Agregar Subcategoria</a></button>
-        <br>
+          <div class="form-group">
+            <label for="objetivo">Nombre Subcategoria:</label>
+            <input type="text" class="form-control" id="subcategoria" aria-describedby="subcategoria" value="<%= subcategoria[0].subcategoria %>" name="subcategoria">
+          </div>
 
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col" class="thId">#</th>
-              <th scope="col" class="thCategoria">Categoria</th>
-              <th scope="col" class="thCategoria">Subcategoria</th>
-              <th scope="col" class="thCategoria">Editar</th>
-              <th scope="col" class="thCategoria">Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <% for(let r=0; r<subcategorias.length; ++ r){%>
-              <tr>
-
-                <td class="tdPrecioDescuento"><%= subcategorias[r].id %></td>
-                <td class="tdPrecioDescuento"><%= subcategorias[r].categoriaSubcategoria.categoria %></td>
-                <td class="tdPrecioDescuento"><%= subcategorias[r].subcategoria %></td>
-                <td class="tdPrecioDescuento"><button type="button" class="btn btn-primary"><a  href="/admin/categorias/subcategorias/editar/<%= subcategorias[r].id %>" class="linkEditar">Editar</a></button></td>
-                <td class="tdPrecioDescuento"><button type="button" class="btn btn-danger"><a href="" class="linkEditar">Eliminar</a></button></td>              
-              </tr>
-              
-            <% } %>
-
-
-          </tbody>
-        </table>
-
-
+          <div class="form-group">
+            <label for="objetivo">Categoria</label>
+            <input type="text" class="form-control" id="categoria" aria-describedby="categoria" value="<%= subcategoria[0].categoriaSubcategoria.categoria %>" name="categoria">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+        </form>
+    
       </div>
 
     </div>

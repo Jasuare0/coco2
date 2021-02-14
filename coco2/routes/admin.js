@@ -521,6 +521,8 @@ router.get('/categorias/editar/:id', categoriasController.editar);
 router.post('/categorias/editar/:id', categoriasController.actualizarCategoria);
 
 router.get('/categorias/subcategorias', categoriasController.subcategorias);
+router.get('/categorias/subcategorias/editar/:id', categoriasController.editarSubcategoria);
+router.post('/categorias/subcategorias/editar/:id', categoriasController.actualizarSubCategoria);
 
 
 module.exports = router;
