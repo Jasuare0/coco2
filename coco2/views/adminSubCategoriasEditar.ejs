@@ -54,7 +54,29 @@
 
           <div class="form-group">
             <label for="objetivo">Categoria</label>
-            <input type="text" class="form-control" id="categoria" aria-describedby="categoria" value="<%= subcategoria[0].categoriaSubcategoria.categoria %>" name="categoria">
+
+            <div class="input-group">
+              <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="categoria">
+                <option selected>Seleccionar Categoria</option>
+                
+                <% for(let l=0; l<listadoCategorias.length; ++ l){ %>
+
+                  <% if(listadoCategorias[l].categoria == subcategoria[0].categoriaSubcategoria.categoria){ %>
+                  
+                    <option value="<%= listadoCategorias[l].id %>" selected><%= listadoCategorias[l].categoria %></option>
+
+                  <% }else{ %>
+                  
+                    <option value="<%= listadoCategorias[l].id %>"><%= listadoCategorias[l].categoria %></option>
+
+                  <% } %>
+                
+                <% } %>
+
+              </select>
+
+            </div>
+
           </div>
           
           <button type="submit" class="btn btn-primary">Actualizar Datos</button>

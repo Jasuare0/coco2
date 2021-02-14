@@ -222,13 +222,11 @@ const categoriasController = {
     'actualizarSubCategoria': function(req,res){
 
 
-        console.log('Resultado Subcategoria: ')
-        console.log(req.body.subcategoria)
-
 
         db.Subcategorias.update(
             {
                 subcategoria: req.body.subcategoria,
+                categoria_id: req.body.categoria,
             },
             {
                 where:{
