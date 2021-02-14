@@ -5,6 +5,7 @@ var confirmacionController = require('../controllers/confirmacionController');
 var casosdeexitoController = require('../controllers/casosdeexitoController');
 var serviciosController = require('../controllers/serviciosController');
 var fuentesColoresController = require('../controllers/fuentesColoresController');
+var categoriasController = require('../controllers/categoriasController');
 
 
 // INICIO PARA CARGAR ARCHIVOS CON MULTER
@@ -514,6 +515,11 @@ router.get('/fuentescolores', fuentesColoresController.traerfuentesColores);
 router.post('/fuentescolores/coloresbarranavegacion', fuentesColoresController.coloresBarraNavegacion);
 router.post('/fuentescolores/coloresBody', fuentesColoresController.coloresBody);
 router.post('/fuentescolores/fuente', fuentesColoresController.fuente);
+
+router.get('/categorias', categoriasController.categorias);
+router.get('/categorias/editar/:id', categoriasController.editar);
+router.post('/categorias/editar/:id', categoriasController.actualizarCategoria);
+
 
 
 module.exports = router;
