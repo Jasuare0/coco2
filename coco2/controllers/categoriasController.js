@@ -115,6 +115,55 @@ const categoriasController = {
         })
 
 
+    },
+    'subcategorias': function(req,res){
+        let usuarioLogueado = req.session.usuario;
+        
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+
+        if(usuarioLogueado != ''){
+
+            db.Inicio.findAll()
+            .then(resultados => {
+                db.Productos.findAll()
+                .then(existenProductos => {
+                    db.Servicios.findAll()
+                    .then(existenServicios => {
+
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+
+                            db.Subcategorias.findAll(
+                                {
+                                    include: [{association: 'categoriaSubcategoria'}]
+                                }
+                            )
+                            .then(subcategorias => {
+    
+                                res.render('adminSubCategorias',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategorias});
+                                
+                            })
+    
+                        })
+
+
+                    })
+                })
+            })
+
+        }else{
+            res.redirect('/users');
+
+        }
+
+
+
+
     }
 
 }

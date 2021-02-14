@@ -7,6 +7,9 @@ module.exports = (sequelize, Types) =>{
         },
         subcategoria: {
             type: Types.STRING,
+        },
+        categoria_id: {
+            type: Types.INTEGER,
         }
 
     },
@@ -18,6 +21,16 @@ module.exports = (sequelize, Types) =>{
         updatedAt: 'updated_at',
         deletedAt: 'deleted_at'  
     });
+
+  
+    Subcategorias.associate = function (models) {
+        Subcategorias.belongsTo(models.Categorias,{
+            as: "categoriaSubcategoria",
+            foreignKey: "categoria_id"
+        })
+
+    }
+
 
     return Subcategorias;
 }
