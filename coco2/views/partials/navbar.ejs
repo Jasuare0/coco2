@@ -52,7 +52,7 @@
             <% } %>
 
             <li class="nav-item">
-              <a class="nav-link" href="/casosdeexito">Casos de Éxito</a>
+              <a class="nav-link casosDeExito" href="/casosdeexito">Casos de Éxito</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="/blogs">Blogs</a>
@@ -73,7 +73,7 @@
           <!-- ÍCONO BASE DE DATOS. En caso de estar logueado el usuario administrador
           le permite consultar y editar la base de datos. -->
 
-          <div>
+          <div class="contenedorBarraBusqueda">
             
             <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
             <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." >
@@ -84,7 +84,7 @@
               <option value="Los Angeles">
               <option value="Chicago">
             </datalist>
-
+            <button class="btn btn-outline-secondary" type="button">Buscar</button>
           </div>
 
           <% if(usuarioLogueado != ''){ %>
