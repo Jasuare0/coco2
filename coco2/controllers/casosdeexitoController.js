@@ -299,14 +299,22 @@ const casosdeexitoController = {
 
         }
 
-        db.Inicio.findAll()
+        db.Inicio.findAll() 
         .then(resultados => {
-                
-            db.Categorias.findAll()
-            .then(listadoCategorias => {
-                res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado,listadoCategorias})
             
+            db.Productos.findAll()
+            .then(existenProductos => {
+                db.Servicios.findAll()
+                .then(existenServicios => {            
+                    db.Categorias.findAll()
+                    .then(listadoCategorias => {
+                        res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado,listadoCategorias,existenProductos,existenServicios})
+                    
+                    })
+        
+                })
             })
+
 
         })
 

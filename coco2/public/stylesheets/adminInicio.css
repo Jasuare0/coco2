@@ -1,3 +1,11 @@
+.linksNavInferior{
+    color: blue;
+}
+
+.linksNavInferior:link, .linksNavInferior:visited, .linksNavInferior:active {
+    color: blue;
+    text-decoration:none;
+}
 
 /* CELLPHONES */
 @media only screen and (max-width: 425px) {

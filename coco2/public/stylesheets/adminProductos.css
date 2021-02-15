@@ -1,3 +1,12 @@
+.linksNavInferior{
+    color: blue;
+}
+
+.linksNavInferior:link, .linksNavInferior:visited, .linksNavInferior:active {
+    color: blue;
+    text-decoration:none;
+}
+
 .external-container-section{
     width: 100%;
     display: flex;

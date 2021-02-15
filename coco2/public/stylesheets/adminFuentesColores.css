@@ -1,4 +1,11 @@
+.linksNavInferior{
+    color: blue;
+}
 
+.linksNavInferior:link, .linksNavInferior:visited, .linksNavInferior:active {
+    color: blue;
+    text-decoration:none;
+}
 
 #container-muestra-color-barra-navegacion{
     border: 1px solid grey;
