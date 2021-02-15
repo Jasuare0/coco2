@@ -519,6 +519,9 @@ router.post('/fuentescolores/fuente', fuentesColoresController.fuente);
 router.get('/categorias', categoriasController.categorias);
 router.get('/categorias/editar/:id', categoriasController.editar);
 router.post('/categorias/editar/:id', categoriasController.actualizarCategoria);
+router.get('/categorias/crear', categoriasController.crearCategoria);
+router.post('/categorias/crear', categoriasController.crearNuevaCategoria);
+
 
 router.get('/categorias/subcategorias', categoriasController.subcategorias);
 router.get('/categorias/subcategorias/editar/:id', categoriasController.editarSubcategoria);
