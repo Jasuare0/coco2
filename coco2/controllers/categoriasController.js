@@ -185,6 +185,39 @@ const categoriasController = {
 
 
     },
+    'eliminarCategoria': function(req,res){
+        let usuarioLogueado = req.session.usuario;
+        
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+
+        if(usuarioLogueado != ''){
+            db.Categorias.destroy({
+                where: {
+                    id: req.params.id,
+                }
+            })
+            .then(eliminacionCategoria => {
+
+                let ubicacionPrevia = 'Categorias';
+                let direccionPrevia = 'categorias';
+    
+                res.redirect('/admin/confirmacionaccionbd/?ubicacionprevia='+ ubicacionPrevia +'&direccionprevia=' + direccionPrevia);
+                
+    
+            })
+
+        }else{
+            res.redirect('/users');
+
+        }
+
+    },
+
     'subcategorias': function(req,res){
         let usuarioLogueado = req.session.usuario;
         
@@ -377,6 +410,38 @@ const categoriasController = {
             
 
         })
+
+    },
+    'eliminarSubCategoria': function(req,res){
+        let usuarioLogueado = req.session.usuario;
+        
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+
+        if(usuarioLogueado != ''){
+            db.Subcategorias.destroy({
+                where: {
+                    id: req.params.id,
+                }
+            })
+            .then(eliminacionSubCategoria => {
+                
+                let ubicacionPrevia = 'Subcategorias';
+                let direccionPrevia = 'categorias/subcategorias';
+    
+                res.redirect('/admin/confirmacionaccionbd/?ubicacionprevia='+ ubicacionPrevia +'&direccionprevia=' + direccionPrevia);
+                
+    
+            })
+
+        }else{
+            res.redirect('/users');
+
+        }
 
     }
 

@@ -64,7 +64,7 @@
                 <td class="tdPrecioDescuento"><%= listadoCategorias[r].id %></td>
                 <td class="tdPrecioDescuento"><%= listadoCategorias[r].categoria %></td>
                 <td class="tdPrecioDescuento"><button type="button" class="btn btn-primary"><a  href="/admin/categorias/editar/<%= listadoCategorias[r].id %>" class="linkEditar">Editar</a></button></td>
-                <td class="tdPrecioDescuento"><button type="button" class="btn btn-danger"><a href="" class="linkEditar">Eliminar</a></button></td>              
+                <td class="tdPrecioDescuento"><button type="button" class="btn btn-danger"><a href="/admin/categorias/eliminar/<%= listadoCategorias[r].id %>" class="linkEditar">Eliminar</a></button></td>              
               </tr>
               
             <% } %>

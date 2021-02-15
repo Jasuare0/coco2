@@ -521,6 +521,7 @@ router.get('/categorias/editar/:id', categoriasController.editar);
 router.post('/categorias/editar/:id', categoriasController.actualizarCategoria);
 router.get('/categorias/crear', categoriasController.crearCategoria);
 router.post('/categorias/crear', categoriasController.crearNuevaCategoria);
+router.get('/categorias/eliminar/:id', categoriasController.eliminarCategoria);
 
 
 router.get('/categorias/subcategorias', categoriasController.subcategorias);
@@ -528,6 +529,7 @@ router.get('/categorias/subcategorias/editar/:id', categoriasController.editarSu
 router.post('/categorias/subcategorias/editar/:id', categoriasController.actualizarSubCategoria);
 router.get('/categorias/subcategorias/crear', categoriasController.crearSubCategoria);
 router.post('/categorias/subcategorias/crear', categoriasController.crearNuevaSubCategoria);
+router.get('/categorias/subcategorias/eliminar/:id', categoriasController.eliminarSubCategoria);
 
 
 module.exports = router;
