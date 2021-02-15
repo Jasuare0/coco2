@@ -18,7 +18,7 @@
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel='stylesheet' href='/stylesheets/navbar.css' />
 
-    <link rel='stylesheet' href='/stylesheets/adminProductos.css' />
+    <link rel='stylesheet' href='/stylesheets/adminNosotros.css' />
 
 </head>
 <body>
@@ -35,47 +35,48 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Inicio</a></li>
         <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Subcategorias</li>
+        <li class="breadcrumb-item"><a href="/admin/categorias">Subcategorias</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Crear</li>
       </ol>
     </nav>
 
 
-    <div class="external-container-section contenedortabla">
+
+    <div class="external-container-section">
 
       <div class="internal-container-section">
+        <form class="container-form-nosotros" action="/admin/categorias/subcategorias/crear" method="POST">
 
-        <button type="button" class="btn btn-primary"><a href="/admin/categorias/subcategorias/crear" class="linkEditar"> + Agregar Subcategoria</a></button>
-        <br>
+          <div class="form-group">
+            <label for="objetivo">Nombre Nueva Subcategoria:</label>
+            <input type="text" class="form-control" id="subcategoria" aria-describedby="subcategoria" name="subcategoria">
+          </div>
 
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col" class="thId">#</th>
-              <th scope="col" class="thCategoria">Categoria</th>
-              <th scope="col" class="thCategoria">Subcategoria</th>
-              <th scope="col" class="thCategoria">Editar</th>
-              <th scope="col" class="thCategoria">Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
+          <div class="form-group">
+            <label for="objetivo">Categoria</label>
 
-            <% for(let r=0; r<subcategorias.length; ++ r){%>
-              <tr>
+            <div class="input-group">
+              <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="categoria">
+                
+                <option selected disabled value="<%= listadoCategorias[0].id %>">Seleccionar Categoria</option>
+                
+                <% for(let l=0; l<listadoCategorias.length; ++ l){ %>
+                  
+                    <option value="<%= listadoCategorias[l].id %>"><%= listadoCategorias[l].categoria %></option>
+               
+                <% } %>
 
-                <td class="tdPrecioDescuento"><%= subcategorias[r].id %></td>
-                <td class="tdPrecioDescuento"><%= subcategorias[r].categoriaSubcategoria.categoria %></td>
-                <td class="tdPrecioDescuento"><%= subcategorias[r].subcategoria %></td>
-                <td class="tdPrecioDescuento"><button type="button" class="btn btn-primary"><a  href="/admin/categorias/subcategorias/editar/<%= subcategorias[r].id %>" class="linkEditar">Editar</a></button></td>
-                <td class="tdPrecioDescuento"><button type="button" class="btn btn-danger"><a href="" class="linkEditar">Eliminar</a></button></td>              
-              </tr>
-              
-            <% } %>
+              </select>
 
+            </div>
 
-          </tbody>
-        </table>
+          </div>
 
 
+          
+          <button type="submit" class="btn btn-primary">Crear Subcategoria</button>
+        </form>
+    
       </div>
 
     </div>

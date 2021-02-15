@@ -315,7 +315,72 @@ const categoriasController = {
         })
 
 
+    },
+    'crearSubCategoria': function(req,res){
+
+        let usuarioLogueado = req.session.usuario;
+        
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+
+        if(usuarioLogueado != ''){
+
+            db.Inicio.findAll()
+            .then(resultados => {
+                db.Productos.findAll()
+                .then(existenProductos => {
+                    db.Servicios.findAll()
+                    .then(existenServicios => {
+                        db.Categorias.findAll()
+                        .then(listadoCategorias => {
+                            db.Categorias.findAll()
+                            .then(categoria => {
+                                res.render('adminCrearSubCategoria',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria});
+
+                            })
+
+                        })
+
+
+                    })
+                })
+            })
+
+        }else{
+            res.redirect('/users');
+
+        }
+
+
+        
+    },
+
+    'crearNuevaSubCategoria': function(req,res){
+
+        db.Subcategorias.create(
+            {
+                subcategoria: req.body.subcategoria,
+                categoria_id: req.body.categoria
+            }
+            
+        )
+        .then(categoriaNuevaActualizada => {
+
+            let ubicacionPrevia = 'Subcategorias';
+            let direccionPrevia = 'categorias/subcategorias';
+
+            res.redirect('/admin/confirmacionaccionbd/?ubicacionprevia='+ ubicacionPrevia +'&direccionprevia=' + direccionPrevia);
+            
+
+        })
+
     }
+
+
 
 }
 

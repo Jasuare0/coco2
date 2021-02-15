@@ -526,6 +526,8 @@ router.post('/categorias/crear', categoriasController.crearNuevaCategoria);
 router.get('/categorias/subcategorias', categoriasController.subcategorias);
 router.get('/categorias/subcategorias/editar/:id', categoriasController.editarSubcategoria);
 router.post('/categorias/subcategorias/editar/:id', categoriasController.actualizarSubCategoria);
+router.get('/categorias/subcategorias/crear', categoriasController.crearSubCategoria);
+router.post('/categorias/subcategorias/crear', categoriasController.crearNuevaSubCategoria);
 
 
 module.exports = router;
