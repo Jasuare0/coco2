@@ -48,14 +48,19 @@ const busquedaController = {
                                 )
                                 .then(productosBusqueda => {
 
-                                    if(productosBusqueda.length != 0){
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        if(productosBusqueda.length != 0){
 
-                                        res.render('resultadoBusqueda',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda})
+                                            res.render('resultadoBusqueda',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda,casosdeexitoenBD})
+        
+                                        }else{
+                                            res.render('resultadoBusquedaInexistente',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda,casosdeexitoenBD})
     
-                                    }else{
-                                        res.render('resultadoBusquedaInexistente',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda})
+                                        }
+                                        
+                                    })
 
-                                    }
 
                                 })
     

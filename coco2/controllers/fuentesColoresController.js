@@ -30,7 +30,13 @@ const fuentesColoresController = {
                             .then(existenServicios => {
                                 db.Categorias.findAll()
                                 .then(listadoCategorias => {
-                                    res.render('adminEditFuentesColores',{usuarioLogueado, resultados: resultados,fuentes,fuenteSeleccionada,existenProductos, existenServicios,listadoCategorias});
+
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        res.render('adminEditFuentesColores',{usuarioLogueado, resultados: resultados,fuentes,fuenteSeleccionada,existenProductos, existenServicios,listadoCategorias,casosdeexitoenBD});
+                                    
+                                    })
+
                                 })
 
 

@@ -22,7 +22,11 @@ const usuarioController = {
                 .then(existenServicios => {
                     db.Categorias.findAll()
                     .then(listadoCategorias => {
-                        res.render('login',{validacionUsuario: '', usuarioLogueado, validacionContrasena: '', mensaje: '',resultados: resultados,existenProductos,existenServicios,listadoCategorias})
+                        db.Casosdeexito.findAll()
+                        .then(casosdeexitoenBD => {
+                            res.render('login',{validacionUsuario: '', usuarioLogueado, validacionContrasena: '', mensaje: '',resultados: resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})
+                        })
+
                     })
 
 
@@ -74,7 +78,16 @@ const usuarioController = {
                             .then(existenProductos => {
                                 db.Servicios.findAll()
                                 .then(existenServicios => {
-                                    res.render('login',{validacionUsuario: 'Ok', validacionContrasena: 'notOk', mensaje: 'Verificar Contraseña:',existenProductos,existenServicios,resultados,usuarioLogueado})                        
+                                    db.Categorias.findAll()
+                                    .then(listadoCategorias => {
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('login',{validacionUsuario: 'Ok', validacionContrasena: 'notOk', mensaje: 'Verificar Contraseña:',existenProductos,existenServicios,resultados,usuarioLogueado,listadoCategorias,casosdeexitoenBD})                        
+                                        
+                                        })
+    
+                                    })
+
     
                                 })                            
                             })
@@ -95,7 +108,13 @@ const usuarioController = {
                         .then(existenServicios => {
                             db.Categorias.findAll()
                             .then(listadoCategorias => {
-                                res.render('login',{validacionUsuario: 'notOk', validacionContrasena: '', mensaje: 'El usuario ingresado no existe en la base de datos, favor reingresar los datos:',existenProductos,existenServicios,resultados,usuarioLogueado,listadoCategorias})                        
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    
+                                    res.render('login',{validacionUsuario: 'notOk', validacionContrasena: '', mensaje: 'El usuario ingresado no existe en la base de datos, favor reingresar los datos:',existenProductos,existenServicios,resultados,usuarioLogueado,listadoCategorias,casosdeexitoenBD})                        
+                                
+                                })
+
                             })
 
     

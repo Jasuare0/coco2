@@ -36,7 +36,13 @@ const casosdeexitoController = {
                                 
                                 db.Categorias.findAll()
                                 .then(listadoCategorias => {
-                                    res.render('casosdeexito',{resultados,usuarioLogueado,redessociales,casosdeexito,fuentes,existenProductos,existenServicios,listadoCategorias});
+
+                                    
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        res.render('casosdeexito',{resultados,usuarioLogueado,redessociales,casosdeexito,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                                    })
+
                                 
                                 })
 
@@ -86,7 +92,13 @@ const casosdeexitoController = {
 
                         db.Categorias.findAll()
                         .then(listadoCategorias => {
-                            res.render('adminCasosDeExito',{resultados,usuarioLogueado,casosdeexito,existenProductos, existenServicios,listadoCategorias})
+
+                                                                
+                            db.Casosdeexito.findAll()
+                            .then(casosdeexitoenBD => {
+                                res.render('adminCasosDeExito',{resultados,usuarioLogueado,casosdeexito,existenProductos, existenServicios,listadoCategorias,casosdeexitoenBD})
+                            })
+
                         
                         })
 
@@ -159,7 +171,12 @@ const casosdeexitoController = {
                 
                 db.Categorias.findAll()
                 .then(listadoCategorias => {
-                    res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito,listadoCategorias})
+
+                    db.Casosdeexito.findAll()
+                    .then(casosdeexitoenBD => {
+                        res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito,listadoCategorias,casosdeexitoenBD})
+                    })
+
                 })
 
 
@@ -308,7 +325,12 @@ const casosdeexitoController = {
                 .then(existenServicios => {            
                     db.Categorias.findAll()
                     .then(listadoCategorias => {
-                        res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado,listadoCategorias,existenProductos,existenServicios})
+
+                        db.Casosdeexito.findAll()
+                        .then(casosdeexitoenBD => {
+                            res.render('adminAgregarCasosDeExito',{resultados,usuarioLogueado,listadoCategorias,existenProductos,existenServicios,casosdeexitoenBD})
+                        })
+
                     
                     })
         

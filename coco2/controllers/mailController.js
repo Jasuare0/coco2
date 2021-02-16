@@ -86,7 +86,13 @@ const mailController = {
                         .then(existenServicios => {
                             db.Categorias.findAll()
                             .then(listadoCategorias => {
-                                res.render('graciasContactarnos',{usuarioLogueado,redessociales, resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('graciasContactarnos',{usuarioLogueado,redessociales, resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                                
+                                })
+
                             })
 
 

@@ -60,7 +60,16 @@ const indexController = {
                                             
                                             db.Categorias.findAll()
                                             .then(listadoCategorias => {
-                                                res.render('index',{resultados,clientes,carousel,usuarioLogueado,redessociales, productos,fuentes,servicios,existenServicios,existenProductos,listadoCategorias});
+
+                                                db.Casosdeexito.findAll()
+                                                .then(casosdeexitoenBD => {
+
+                                                    console.log('Resultado casosdeexitoenBD: ')
+                                                    console.log(casosdeexitoenBD.length)
+
+                                                    res.render('index',{resultados,clientes,carousel,usuarioLogueado,redessociales, productos,fuentes,servicios,existenServicios,existenProductos,listadoCategorias,casosdeexitoenBD});
+
+                                                })
 
                                             })
                
@@ -120,7 +129,13 @@ const indexController = {
                                     }
                                     db.Categorias.findAll()
                                     .then(listadoCategorias => {
-                                        res.render('nosotros',{carousel,usuarioLogueado,redessociales,nosotros,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+                                        
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('nosotros',{carousel,usuarioLogueado,redessociales,nosotros,resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+
+                                        })
+
                                     
                                     })
                                 })
@@ -179,8 +194,12 @@ const indexController = {
                 
                                     db.Categorias.findAll()
                                     .then(listadoCategorias => {
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('productos',{productos, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                                        
+                                        })
 
-                                        res.render('productos',{productos, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
                                     
                                     })
         
@@ -238,7 +257,12 @@ const indexController = {
                 
                                     db.Categorias.findAll()
                                     .then(listadoCategorias => {
-                                        res.render('DetalleProducto',{usuarioLogueado,producto,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias})
+
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('DetalleProducto',{usuarioLogueado,producto,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})
+                                        })
+
                                     
                                     })
 
@@ -299,7 +323,13 @@ const indexController = {
                             
                                     db.Categorias.findAll()
                                     .then(listadoCategorias => {
-                                        res.render('servicios',{servicios, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias});
+
+                                        
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('servicios',{servicios, carousel,usuarioLogueado,redessociales,resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                                        })
+
                                     
                                     })
 
@@ -358,7 +388,13 @@ const indexController = {
                                                                 
                                     db.Categorias.findAll()
                                     .then(listadoCategorias => {
-                                        res.render('DetalleServicio',{usuarioLogueado,servicio,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias})
+
+                                                                                
+                                        db.Casosdeexito.findAll()
+                                        .then(casosdeexitoenBD => {
+                                            res.render('DetalleServicio',{usuarioLogueado,servicio,redessociales,caracteristicas,resultados,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})
+                                        })
+
                                     
                                     })
         
@@ -490,7 +526,14 @@ const indexController = {
             
                                 db.Categorias.findAll()
                                 .then(listadoCategorias => {
-                                    res.render('contactenos',{resultados, carousel,usuarioLogueado,redessociales,fuentes,existenProductos,existenServicios,listadoCategorias});
+
+                                                                                                                    
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        res.render('contactenos',{resultados, carousel,usuarioLogueado,redessociales,fuentes,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+
+                                    })
+
                                 
                                 })
         

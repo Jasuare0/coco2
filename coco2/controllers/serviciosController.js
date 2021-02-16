@@ -29,7 +29,13 @@ const serviciosController = {
                         .then(existenServicios => {
                             db.Categorias.findAll()
                             .then(listadoCategorias => {
-                                res.render('adminServicios',{servicios,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('adminServicios',{servicios,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                                
+                                })
+
                             })
 
 
@@ -81,7 +87,12 @@ const serviciosController = {
                             .then(existenServicios => {
                                 db.Categorias.findAll()
                                 .then(listadoCategorias => {
-                                    res.render('adminEditServicio', {servicio,caracteristicas,usuarioLogueado,resultados: resultados, existenProductos, existenServicios,listadoCategorias})
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        res.render('adminEditServicio', {servicio,caracteristicas,usuarioLogueado,resultados: resultados, existenProductos, existenServicios,listadoCategorias,casosdeexitoenBD})
+                                    
+                                    })
+
                                 })
 
 
@@ -162,7 +173,13 @@ const serviciosController = {
                 .then(existenServicios => {
                     db.Categorias.findAll()
                     .then(listadoCategorias => {
-                        res.render('adminCrearServicio',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+
+                        db.Casosdeexito.findAll()
+                        .then(casosdeexitoenBD => {
+                            res.render('adminCrearServicio',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                        
+                        })
+
                     })
 
 
@@ -368,7 +385,13 @@ const serviciosController = {
                             .then(existenServicios => {
                                 db.Categorias.findAll()
                                 .then(listadoCategorias => {
-                                    res.render('adminEditCaracteristicaServicio',{servicio,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})            
+
+                                    
+                                    db.Casosdeexito.findAll()
+                                    .then(casosdeexitoenBD => {
+                                        res.render('adminEditCaracteristicaServicio',{servicio,caracteristica,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})            
+                                    })
+
                                 })
 
 
@@ -483,7 +506,13 @@ const serviciosController = {
                     .then(existenServicios => {
                         db.Categorias.findAll()
                         .then(listadoCategorias => {
-                            res.render('adminCrearCaracteristicaServicio',{servicio,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias})
+
+                            db.Casosdeexito.findAll()
+                            .then(casosdeexitoenBD => {
+                                res.render('adminCrearCaracteristicaServicio',{servicio,usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})
+                            
+                            })
+
                         })
 
 
@@ -589,7 +618,13 @@ const serviciosController = {
                         .then(existenServicios => {
                             db.Categorias.findAll()
                             .then(listadoCategorias => {
-                                res.render('agregarServicioInicio',{usuarioLogueado, servicios,resultados,existenProductos,existenServicios,listadoCategorias})
+
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('agregarServicioInicio',{usuarioLogueado, servicios,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD})
+                                
+                                })
+
                             })
 
 

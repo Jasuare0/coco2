@@ -23,8 +23,11 @@ const categoriasController = {
                     .then(existenServicios => {
                         db.Categorias.findAll()
                         .then(listadoCategorias => {
+                            db.Casosdeexito.findAll()
+                            .then(casosdeexitoenBD => {
+                                res.render('adminCategorias',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
+                            })
 
-                            res.render('adminCategorias',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
                         })
 
 
@@ -70,7 +73,12 @@ const categoriasController = {
                                 }
                             )
                             .then(categoria => {
-                                res.render('adminCategoriasEditar',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria});
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('adminCategoriasEditar',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria,casosdeexitoenBD});
+                                
+                                })
+
 
                             })
 
@@ -113,7 +121,13 @@ const categoriasController = {
                         .then(listadoCategorias => {
                             db.Categorias.findAll()
                             .then(categoria => {
-                                res.render('adminCrearCategoria',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria});
+
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+
+                                    res.render('adminCrearCategoria',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria,casosdeexitoenBD});
+                                
+                                })
 
                             })
 
@@ -247,7 +261,12 @@ const categoriasController = {
                             )
                             .then(subcategorias => {
     
-                                res.render('adminSubCategorias',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategorias});
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+
+                                    res.render('adminSubCategorias',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategorias,casosdeexitoenBD});
+                                
+                                })
                                 
                             })
     
@@ -299,8 +318,11 @@ const categoriasController = {
                                 }    
                             )
                             .then(subcategoria => {
-
-                                res.render('adminSubCategoriasEditar',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategoria});
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('adminSubCategoriasEditar',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,subcategoria,casosdeexitoenBD});
+                                
+                                })
 
                             })
 
@@ -372,7 +394,13 @@ const categoriasController = {
                         .then(listadoCategorias => {
                             db.Categorias.findAll()
                             .then(categoria => {
-                                res.render('adminCrearSubCategoria',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria});
+
+                                db.Casosdeexito.findAll()
+                                .then(casosdeexitoenBD => {
+                                    res.render('adminCrearSubCategoria',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,categoria,casosdeexitoenBD});
+
+                                
+                                })
 
                             })
 
