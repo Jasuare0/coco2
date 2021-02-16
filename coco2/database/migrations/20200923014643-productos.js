@@ -29,6 +29,15 @@ module.exports = {
       'preciocondescuento': {
       type: Sequelize.STRING,
       },
+      'categoria_id': {
+      type: Sequelize.INTEGER,
+      },
+      'marca_id': {
+      type: Sequelize.INTEGER,
+      },
+      'subcategoria_id': {
+      type: Sequelize.INTEGER,
+      },
       'created_at': {
           "type": Sequelize.DATE,
           "allowNull": true,
