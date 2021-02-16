@@ -53,7 +53,7 @@ const busquedaController = {
                                         res.render('resultadoBusqueda',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda})
     
                                     }else{
-                                        res.redirect('/');
+                                        res.render('resultadoBusquedaInexistente',{resultados,fuentes,existenProductos,existenServicios,listadoCategorias,usuarioLogueado,redessociales,productosBusqueda})
 
                                     }
 
