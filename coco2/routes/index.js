@@ -4,6 +4,7 @@ var indexController = require('../controllers/indexController');
 var mailController = require('../controllers/mailController');
 var casosdeexitoController = require('../controllers/casosdeexitoController');
 var categoriaController = require('../controllers/categoriaController');
+var busquedaController = require('../controllers/busquedaController');
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -25,6 +26,8 @@ router.post('/contactenos/enviandomail', mailController.enviandomail);
 router.get('/contactenos/confirmacion', mailController.confirmacionEnvio);
 
 router.get('/casosdeexito', casosdeexitoController.casosdeexito);
+
+router.post('/resultadobusqueda', busquedaController.busqueda);
 
 
 module.exports = router;
