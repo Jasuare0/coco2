@@ -1,3 +1,37 @@
+
+/* CELLPHONES */
+@media only screen and (max-width: 425px) {
+
+.navbar-toggler{
+    border-width: 1px;
+    border-color: grey;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-right: 0px;
+
+}
+
+.rayas-dentro-boton-navbar{
+
+    color:grey;
+    height: 10px;
+}
+
+
+.contenedorBarraBusqueda{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+}
+
 .formBarraBusqueda{
     width:100%;
     display: flex;
@@ -37,7 +71,7 @@
 .liListaCategoriasProductos  {
 
     list-style: none;
-    width: 33.3%;
+    width: 100%;
     /* border: 1px solid yellow; */
     text-align: center;
     line-height: 50px;
@@ -74,40 +108,6 @@ a:link, a:visited, a:active {
 }
 
 
-
-/* CELLPHONES */
-@media only screen and (max-width: 425px) {
-
-.navbar-toggler{
-    border-width: 1px;
-    border-color: grey;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 0px;
-    padding-right: 0px;
-
-}
-
-.rayas-dentro-boton-navbar{
-
-    color:grey;
-    height: 10px;
-}
-
-
-.contenedorBarraBusqueda{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-
-}
-
 }
 
 /* PORTRAITS TABLETS AND LARGE PHONES*/
@@ -142,7 +142,83 @@ a:link, a:visited, a:active {
         align-content: center;
     
     }
+ 
     
+    .formBarraBusqueda{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+    }
+    
+    
+    .listaCategoriasProductos{
+        display: none;
+    }
+    
+    .categoriasProductos:hover {
+        background-color: rgba(173, 122, 122, 0.6);
+    }
+    
+    .categoriasProductos:hover .listaCategoriasProductos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content:flex-start;
+        justify-items: center;
+        /* border: 1px solid red; */
+        position: absolute;
+        /* left: 10px; */
+        z-index: 100;
+        background-color: black;
+        width: 60vw;
+    }
+    
+    .liListaCategoriasProductos  {
+    
+        list-style: none;
+        width: 33.3%;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .liListaCategoriasProductos:hover {
+        background-color: grey;
+    
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+        color: white;
+    
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        text-decoration:none;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        color: white;
+    }
+    
+    .nav-link:hover {
+        color: grey;
+    }
+
 }
 /* LANDSCAPE TABLETS */
 
@@ -178,6 +254,83 @@ a:link, a:visited, a:active {
         align-content: center;
 
     }
+
+    .formBarraBusqueda{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+    }
+    
+    
+    .listaCategoriasProductos{
+        display: none;
+    }
+    
+    .categoriasProductos:hover {
+        background-color: rgba(173, 122, 122, 0.6);
+    }
+    
+    .categoriasProductos:hover .listaCategoriasProductos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content:flex-start;
+        justify-items: center;
+        /* border: 1px solid red; */
+        position: absolute;
+        /* left: 10px; */
+        z-index: 100;
+        background-color: black;
+        width: 60vw;
+    }
+    
+    .liListaCategoriasProductos  {
+    
+        list-style: none;
+        width: 33.3%;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .liListaCategoriasProductos:hover {
+        background-color: grey;
+    
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+        color: white;
+    
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        text-decoration:none;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        color: white;
+    }
+    
+    .nav-link:hover {
+        color: grey;
+    }
+
+
 
 }
 
@@ -235,4 +388,79 @@ a:link, a:visited, a:active {
         align-content: center;
     
     }
+    .formBarraBusqueda{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+    }
+    
+    
+    .listaCategoriasProductos{
+        display: none;
+    }
+    
+    .categoriasProductos:hover {
+        background-color: rgba(173, 122, 122, 0.6);
+    }
+    
+    .categoriasProductos:hover .listaCategoriasProductos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content:flex-start;
+        justify-items: center;
+        /* border: 1px solid red; */
+        position: absolute;
+        /* left: 10px; */
+        z-index: 100;
+        background-color: black;
+        width: 60vw;
+    }
+    
+    .liListaCategoriasProductos  {
+    
+        list-style: none;
+        width: 33.3%;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .liListaCategoriasProductos:hover {
+        background-color: grey;
+    
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+        color: white;
+    
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        text-decoration:none;
+    }
+    
+    .nav-link:link, .nav-link:visited, .nav-link:active {
+        color: white;
+    }
+    
+    .nav-link:hover {
+        color: grey;
+    }
+
 }
