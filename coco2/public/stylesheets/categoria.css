@@ -124,25 +124,25 @@
     .contenedorExternoLadoIzqDer{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         justify-items: center;
-        align-items:flex-start;
+        align-items: center;
         align-content: center;
     
     }
     
     
     .contenedorLadoIzquierdo{
-        width: 20%;
+        width: 90%;
     
     }
     
     .contenedorLadoDerecho{
-        width: 75%;
+        width: 100%;
         border: 1px solid rgb(214, 211, 211);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
         justify-items: center;
@@ -213,7 +213,7 @@
     
     
     .card{
-        width: 45%;
+        width: 90%;
         margin-bottom: 20px;
     }
 
