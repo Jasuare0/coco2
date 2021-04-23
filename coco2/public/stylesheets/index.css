@@ -6,6 +6,8 @@ body {
 
 .verMas{
     color: blue;
+    padding-bottom: 20px;
+    
 }
 .verMas:link, .verMas:visited, .verMas:active {
     text-decoration:none;
@@ -301,7 +303,7 @@ body {
      }
      
      .internal-container-section{
-         width: 80%;     
+         width: 90%;     
          display: flex;
          flex-direction: column;
          align-content: center;
@@ -325,7 +327,7 @@ body {
     .external-container-imagenes{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
         align-items: flex-start;
@@ -335,7 +337,7 @@ body {
     }
     
     .internal-container-imagenes{
-        width: 30%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -350,11 +352,13 @@ body {
     }
     .imagen-productos{
         width: 100%;
+        padding-bottom: 20px;
     }
     
     .paragraph-productos{
         width: 100%;
         text-align: justify;
+        
     }
     
     .carousel-aliados{
