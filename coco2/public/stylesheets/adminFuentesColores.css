@@ -21,6 +21,13 @@
     height: 100px;
 }
 
+
+#container-muestra-color-Footer{
+    border: 1px solid grey;
+    width: 100px;
+    height: 100px;
+}
+
 .external-container-section{
     width: 100%;
 

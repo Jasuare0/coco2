@@ -64,8 +64,6 @@ const indexController = {
                                                 db.Casosdeexito.findAll()
                                                 .then(casosdeexitoenBD => {
 
-                                                    console.log('Resultado casosdeexitoenBD: ')
-                                                    console.log(casosdeexitoenBD.length)
 
                                                     res.render('index',{resultados,clientes,carousel,usuarioLogueado,redessociales, productos,fuentes,servicios,existenServicios,existenProductos,listadoCategorias,casosdeexitoenBD});
 

@@ -209,6 +209,90 @@
         </div>
       
 
+<!-- SELECCIÓN COLOR FOOTER -->
+
+        <div class="external-container-section">
+
+            <div class="internal-container-section">
+
+            <form class="container-form" action="/admin/fuentescolores/coloresFooter" method="POST">
+            
+                <div class="form-group">
+                <label for="">Color Contenedor Redes Sociales (Footer):</label>
+
+                    </br>
+                    <label for="">Rojo</label>
+                    <select name="rojoFooter" id="rojoFooter" onchange="cambioDeFuentesColoresFooter()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[18].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+
+                    </select>
+
+                    <label for="">Verde</label>
+                    <select name="verdeFooter" id="verdeFooter" onchange="cambioDeFuentesColoresFooter()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[19].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+
+                    </select>
+
+                    <label for="">Azul</label>
+                    <select name="azulFooter" id="azulFooter" onchange="cambioDeFuentesColoresFooter()">
+                        <% for (let color = 0; color<=255; color ++){ %>
+
+                            <% if(color == resultados[20].value) { %>
+                                <option value="<%= color %>" selected><%= color %></option>
+                            <% }else{ %>
+                                <option value="<%= color %>"><%= color %></option>                            
+                            <% } %>
+
+                        <% } %>
+
+                    </select>
+
+                    <label for="">Alfa</label>
+                    <select name="alfaFooter" id="alfaFooter" onchange="cambioDeFuentesColoresFooter()">
+                        <% for (let color = 0; color<=10; color ++){ %>
+
+                            <% if(color == resultados[21].value) { %>
+                                <option value="<%= color/10 %>" selected><%= color/10 %></option>
+                            <% }else{ %>
+                                <option value="<%= color/10 %>"><%= color/10 %></option>                            
+                            <% } %>
+
+                        <% } %>
+
+                    </select>
+
+                    <div id="container-muestra-color-Footer">
+                    </div>
+
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Actualizar Color</button>
+            </form>
+        
+        
+            </div>
+
+        </div>
+
+
+
 
         <!-- SELECCIÓN DEL TIPO DE FUENTE -->
 
@@ -262,7 +346,8 @@
 
             function mostrarFuentesColores(){
                 document.getElementById("container-muestra-color-barra-navegacion").style.backgroundColor = "rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>,<%= resultados[13].value %>)";
-                document.getElementById("container-muestra-color-body").style.backgroundColor = "rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>,<%= resultados[17].value %>)";
+                document.getElementById("container-muestra-color-body").style.backgroundColor = "rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>,<%= (resultados[17].value)/10 %>)";
+                document.getElementById("container-muestra-color-Footer").style.backgroundColor = "rgba(<%= resultados[18].value %>,<%= resultados[19].value %>,<%= resultados[20].value %>,<%= (resultados[21].value)/10 %>)";
 
             }
 
@@ -291,6 +376,20 @@
                 document.getElementById("container-muestra-color-body").style.backgroundColor = colorRGBA;
 
             }
+
+            function cambioDeFuentesColoresFooter(){
+
+                let rojo = document.getElementById("rojoFooter").value;
+                let verde = document.getElementById("verdeFooter").value;
+                let azul = document.getElementById("azulFooter").value;
+                let opacidad = document.getElementById("alfaFooter").value;
+
+                let colorRGBA = 'rgba(' + rojo + ',' + verde +',' + azul + ',' + opacidad + ')';
+
+                document.getElementById("container-muestra-color-Footer").style.backgroundColor = colorRGBA;
+
+            }
+
 
             function cambioTipoDeFuente(){
 

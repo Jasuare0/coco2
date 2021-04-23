@@ -514,6 +514,8 @@ router.get('/inicio/servicios/sacar/:id', serviciosController.sacarServiciosInic
 router.get('/fuentescolores', fuentesColoresController.traerfuentesColores);
 router.post('/fuentescolores/coloresbarranavegacion', fuentesColoresController.coloresBarraNavegacion);
 router.post('/fuentescolores/coloresBody', fuentesColoresController.coloresBody);
+router.post('/fuentescolores/coloresFooter', fuentesColoresController.coloresFooter);
+
 router.post('/fuentescolores/fuente', fuentesColoresController.fuente);
 
 router.get('/categorias', categoriasController.categorias);

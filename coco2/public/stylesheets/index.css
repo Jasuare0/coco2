@@ -580,6 +580,7 @@ body {
     
     .tituloNombreProducto{
         text-align:center;
+        font-size: 150%;
     }
     .imagen-productos{
         width: 100%;

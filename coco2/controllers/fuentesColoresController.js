@@ -202,6 +202,82 @@ const fuentesColoresController = {
 
 
     },
+
+    'coloresFooter': function(req,res){
+
+        let usuarioLogueado = req.session.usuario;
+
+        if(usuarioLogueado == undefined){
+
+            usuarioLogueado = ''
+
+        }
+
+        if(usuarioLogueado != ''){
+
+
+
+            db.Inicio.update(
+                {
+                    value: req.body.rojoFooter,
+                },
+                {
+                    where: {
+                        id: 19,
+                    }
+                }
+            )
+            
+            db.Inicio.update(
+                {
+                    value: req.body.verdeFooter,
+                },
+                {
+                    where: {
+                        id: 20,
+                    }
+                }
+            )
+            
+            db.Inicio.update(
+                {
+                    value: req.body.azulFooter,
+                },
+                {
+                    where: {
+                        id: 21,
+                    }
+                }
+            )
+            
+            db.Inicio.update(
+                
+                {
+                    value: req.body.alfaFooter*10,
+                },
+                {
+                    where: {
+                        id: 22,
+                    }
+                }
+            )
+            
+            
+            let ubicacionPrevia = 'FuentesColores';
+            let direccionPrevia = 'fuentescolores';
+
+            res.redirect('/admin/confirmacionaccionbd/?ubicacionprevia='+ ubicacionPrevia +'&direccionprevia=' + direccionPrevia);
+                                                          
+        
+        }else{
+    
+            res.redirect('/users');
+
+        }
+
+
+    },
+
     'fuente': function(req,res){
 
 
