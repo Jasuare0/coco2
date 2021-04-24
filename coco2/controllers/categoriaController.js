@@ -82,7 +82,20 @@ const categoriaController = {
 
                                                             db.Casosdeexito.findAll()
                                                             .then(casosdeexitoenBD => {
-                                                                res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD});
+
+                                                                db.Productos.findAll(
+                                                                    {
+                                                                        where: {
+                                                                            categoria_id: req.params.id,
+                                                                        },
+                                                                        include: [{association: "imagenesProductos"}],
+                                                                    }
+                                                                )
+                                                                .then(listadoImagenesProductos => {
+
+                                                                    res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD,listadoImagenesProductos});
+
+                                                                })
 
                                                             })
 
@@ -205,7 +218,22 @@ const categoriaController = {
 
                                                             db.Casosdeexito.findAll()
                                                             .then(casosdeexitoenBD => {
-                                                                res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD});
+
+                                                                db.Productos.findAll(
+                                                                    {
+                                                                        where: {
+                                                                            categoria_id: req.params.id,
+                                                                        },
+                                                                        include: [{association: "imagenesProductos"}],
+                                                                    }
+                                                                )
+                                                                .then(listadoImagenesProductos => {
+                                                                    
+                                                                    res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD,listadoImagenesProductos});
+
+
+                                                                })
+
                                                             })
 
 
@@ -327,7 +355,21 @@ const categoriaController = {
                                                         .then(listadoCategorias => {
                                                             db.Casosdeexito.findAll()
                                                             .then(casosdeexitoenBD => {
-                                                                res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD});
+
+                                                                db.Productos.findAll(
+                                                                    {
+                                                                        where: {
+                                                                            categoria_id: req.params.id,
+                                                                        },
+                                                                        include: [{association: "imagenesProductos"}],
+                                                                    }
+                                                                )
+                                                                .then(listadoImagenesProductos => {
+                                                                   
+                                                                    res.render('categoria',{resultados,usuarioLogueado,redessociales, fuentes,existenServicios,existenProductos,categoria,productosCategoria,categorias,productoConMarca,todasMarcasProductos,todasSubcategoriasProductos,listadoCategorias,casosdeexitoenBD,listadoImagenesProductos});
+                                                                
+                                                                })
+                                                                
                                                             })
 
                                                         })
