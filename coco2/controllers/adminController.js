@@ -651,6 +651,9 @@ const adminController = {
                         
                         })
 
+                        let casosdeexitoenBD = 0;
+
+                        res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
                     
                     })
 
