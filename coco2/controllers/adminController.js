@@ -648,8 +648,6 @@ const adminController = {
                         db.Casosdeexito.findAll()
                         .then(casosdeexitoenBD => {
 
-                            console.log('--- casosdeexitoenBD:  ----')
-                            console.log(casosdeexitoenBD.length)
                             res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
                         
                         })

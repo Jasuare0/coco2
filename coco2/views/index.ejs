@@ -25,7 +25,7 @@
     
   </head>
 
-  <body style="background-color: rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>, <%= (resultados[17].value)/10 %>);<%= fuentes[0].css %>">
+  <body style="background-color: rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>, <%= resultados[17].value /10 %>);<%= fuentes[0].css %>">
 
 
     <!-- INICIO BARRA DE NAVEGACIÓN -->
@@ -167,7 +167,7 @@
             <% for(let i=0; i<servicios.length; i++) {%>
               <div class="internal-container-imagenes">
                 <% if(servicios[i].imagenesServicios != '') { %>
-                  <img src="/images/productos/<%= servicios[i].imagenesServicios[0].imagen %>" alt="" class="imagen-productos">
+                  <img src="/images/servicios/<%= servicios[i].imagenesServicios[0].imagen %>" alt="" class="imagen-productos">
   
                 <% } %>
                 <h2 class="tituloNombreProducto"><%= servicios[i].nombre %></h2>
@@ -212,7 +212,7 @@
                   </p> -->
                 <% } %>
   
-                <a href="/productos/<%= servicios[i].id %>" class="verMas">Ver mas ...</a>
+                <a href="/servicios/<%= servicios[i].id %>" class="verMas">Ver mas ...</a>
               </div>
   
             <% } %>

@@ -1,7 +1,7 @@
 
     <!-- INICIO BARRA DE NAVEGACIÓN -->
 
-    <nav class="navbar navbar-expand-lg containerNavBar" style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>, <%= (resultados[13].value)/10 %>);">
+    <nav class="navbar navbar-expand-lg containerNavBar" style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>,<%= (resultados[13].value)/10 %>)">
 
       <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark containerNavBar"> -->
         
@@ -32,7 +32,7 @@
                   Productos
                 </a>
 
-                <ul class="listaCategoriasProductos"  style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>, <%= (resultados[13].value)/10 %>);">
+                <ul class="listaCategoriasProductos"  style="background-color: rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>, <%= (resultados[13].value)/10 %>)">
                   
                   <% for(let r=0; r<listadoCategorias.length; ++r ){ %>
                     <li class="liListaCategoriasProductos" style="color:white;"><a href="/categoria/<%= listadoCategorias[r].id %>"><%= listadoCategorias[r].categoria %></a></li>
