@@ -345,7 +345,7 @@
         <script>
 
             function mostrarFuentesColores(){
-                document.getElementById("container-muestra-color-barra-navegacion").style.backgroundColor = "rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>,<%= resultados[13].value %>)";
+                document.getElementById("container-muestra-color-barra-navegacion").style.backgroundColor = "rgba(<%= resultados[10].value %>,<%= resultados[11].value %>,<%= resultados[12].value %>,<%= (resultados[13].value)/10 %>)";
                 document.getElementById("container-muestra-color-body").style.backgroundColor = "rgba(<%= resultados[14].value %>,<%= resultados[15].value %>,<%= resultados[16].value %>,<%= (resultados[17].value)/10 %>)";
                 document.getElementById("container-muestra-color-Footer").style.backgroundColor = "rgba(<%= resultados[18].value %>,<%= resultados[19].value %>,<%= resultados[20].value %>,<%= (resultados[21].value)/10 %>)";
 
