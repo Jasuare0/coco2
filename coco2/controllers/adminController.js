@@ -647,7 +647,7 @@ const adminController = {
                         
                         db.Casosdeexito.findAll()
                         .then(casosdeexitoenBD => {
-                            res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias});
+                            res.render('adminCrearProducto',{usuarioLogueado,resultados,existenProductos,existenServicios,listadoCategorias,casosdeexitoenBD});
                         
                         })
 
