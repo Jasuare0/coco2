@@ -174,7 +174,16 @@ const casosdeexitoController = {
 
                     db.Casosdeexito.findAll()
                     .then(casosdeexitoenBD => {
-                        res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito,listadoCategorias,casosdeexitoenBD})
+
+                        db.Servicios.findAll()
+                        .then(existenServicios => {
+                            db.Productos.findAll()
+                            .then(existenProductos => {
+    
+                                res.render('adminEditCasosDeExito',{resultados,usuarioLogueado,casosdeexito,listadoCategorias,casosdeexitoenBD,existenServicios,existenProductos})
+                            })
+    
+                        })
                     })
 
                 })
